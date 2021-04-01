@@ -14,11 +14,10 @@ app.use(bodyParser({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-    app.get('/', (req, res) => {
+    app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
 }
-
 app.post('/get-chart-data', async (req, res) => {
     const { crypto, timestamp } = req.body;
     const endpoint = `https://api.nomics.com/v1/currencies/sparkline?key=${process.env.NOMICS_KEY}&ids=${crypto}&start=${timestamp}T00%3A00%3A00Z`;

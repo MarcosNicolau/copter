@@ -7,6 +7,10 @@
         "start": "node server/server",
         "heroku-postbuild": "cd client && npm install npm && run build"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarcosNicolau/copter.git"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
