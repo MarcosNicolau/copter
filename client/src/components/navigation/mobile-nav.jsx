@@ -16,7 +16,11 @@ const MobileNav = () => {
 	}, [isNavOpen]);
 
 	return (
-		<div className="mobile-nav-container" data-aos="fade-down" data-aos-duration="1200">
+		<div
+			className="mobile-nav-container container"
+			data-aos="fade-down"
+			data-aos-duration="1200"
+		>
 			<div className="flex-row-between mobile-nav">
 				<img src={fullLogo} alt="logo" className="mobile-nav__logo" />
 				<img src={hamburguer} alt="open nav" onClick={setNavState} />

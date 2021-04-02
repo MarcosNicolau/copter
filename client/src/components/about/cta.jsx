@@ -3,7 +3,7 @@ import React from "react";
 const CTA = () => {
 	return (
 		<section>
-			<div className="container flex-column-center space about-cta">
+			<div className="container flex-column-center space text-center about-cta">
 				<div className="about-cta__text">
 					<h2>Miles de personas ya confian y operan con Copter </h2>
 					<p>

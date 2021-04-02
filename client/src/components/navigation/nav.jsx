@@ -9,7 +9,7 @@ const Nav = () => {
 		state: { linksColor, logo, linkspseudo },
 	} = useNavContext();
 	return (
-		<div className="nav-container" data-aos="fade-down" data-aos-duration="1000">
+		<div className="nav-container container" data-aos="fade-down" data-aos-duration="1000">
 			<nav className={`flex-row-between nav desktop-nav ${linksColor}`}>
 				<ul className="flex-row-center">
 					<li>

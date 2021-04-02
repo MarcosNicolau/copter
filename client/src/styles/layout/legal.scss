@@ -1,0 +1,39 @@
+.legal {
+	&__title {
+		margin-top: 8rem;
+		padding: 5rem;
+	}
+
+	&__text {
+		margin: 5rem auto;
+		line-height: 180%;
+		div {
+			margin-bottom: 3rem;
+		}
+		p {
+			line-height: 180%;
+		}
+		h3 {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__list {
+		h5 {
+			margin-top: 1rem;
+			margin-left: 1rem;
+		}
+		li {
+			margin-left: 2rem;
+			color: var(--clr-neutral-400);
+		}
+	}
+
+	&__declaration {
+		li {
+			list-style: initial;
+			margin-left: 2rem;
+			margin-bottom: 1rem;
+		}
+	}
+}

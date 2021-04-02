@@ -24,16 +24,16 @@ const Footer = () => {
 						<div className="flex-row">
 							<div className="flex-column footer__links">
 								<h5>Cotizaciones</h5>
-								<a href="">Bitcoin</a>
-								<a href="">Ethereum</a>
-								<a href="">Reserve</a>
-								<a href="">Rsr</a>
+								<a href="/cotizaciones/bitcoin">Bitcoin</a>
+								<a href="/cotizaciones/ethereum">Ethereum</a>
+								<a href="/cotizaciones/reserve">Reserve</a>
+								<a href="/cotizaciones/">Rsr</a>
 							</div>
 							<div className="flex-column footer__links">
 								<h5>Empresa</h5>
-								<a href="">Terminos y condiciones</a>
-								<a href="">Privacidad</a>
-								<a href="">Limites y condiciones</a>
+								<a href="/nosotros">Nosotros</a>
+								<a href="/legal/terms">Terminos y condiciones</a>
+								<a href="/legal/priv">Privacidad</a>
 							</div>
 						</div>
 					</div>

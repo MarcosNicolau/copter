@@ -19,6 +19,10 @@ import EthereumCotization from "./components/cotizations/pages/ethereum";
 import ReserveCotization from "./components/cotizations/pages/reserve";
 import About from "./components/about";
 
+//Legal
+import Terms from "./components/legal/terms";
+import Privacity from "./components/legal/privacity";
+
 const App = () => {
 	useEffect(() =>
 		Aos.init({
@@ -36,10 +40,13 @@ const App = () => {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/nosotros" component={About} />
+					<Route path="/legal/terms" component={Terms} />
+					<Route path="/legal/priv" component={Privacity} />
+
 					<CryptoContextProvider>
-						<Route exact path="/cotizaciones/bitcoin" component={BitcoinCotization} />
-						<Route exact path="/cotizaciones/ethereum" component={EthereumCotization} />
-						<Route exact path="/cotizaciones/reserve" component={ReserveCotization} />
+						<Route path="/cotizaciones/bitcoin" component={BitcoinCotization} />
+						<Route path="/cotizaciones/ethereum" component={EthereumCotization} />
+						<Route path="/cotizaciones/reserve" component={ReserveCotization} />
 					</CryptoContextProvider>
 				</Switch>
 			</NavContextProvider>

@@ -4,7 +4,7 @@ import MobileNav from "./mobile-nav.jsx";
 
 const Navigation = () => {
 	return (
-		<div className="container" style={{ position: "relative", zIndex: "10" }}>
+		<div className="navigation-container">
 			<Nav />
 			<MobileNav />
 		</div>

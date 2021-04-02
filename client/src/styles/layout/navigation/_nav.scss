@@ -1,5 +1,12 @@
 @use '../../abstracts' as *;
 
+.navigation-container {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+}
+
 .desktop-nav {
 	//Display only on desktop and large devices
 	@include mq("small-medium") {
@@ -7,12 +14,7 @@
 	}
 }
 
-.nav-container {
-	position: relative;
-}
-
 .nav {
-	position: absolute;
 	margin-top: 1rem;
 	font-size: var(--fs-450);
 	width: 100%;
