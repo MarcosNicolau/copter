@@ -9,6 +9,7 @@ import hamburguerLight from "../../../assets/miscellaneous/navigation/hamburguer
 
 const navState = {
 	linksColor: "text-neutral-1000",
+	linkspseudo: "nav__links--light",
 	logo: logoLight,
 	fullLogo: fullLogoLight,
 	dropdown: dropdownLight,
@@ -19,7 +20,6 @@ const navState = {
 
 const navActions = {
 	SET_BLUE_NAV: "set-blue-nav",
-	SET_LIGHT_NAV: "set-light-nav",
 };
 
 const navReducer = (state, action) => {
@@ -27,22 +27,13 @@ const navReducer = (state, action) => {
 		case navActions.SET_BLUE_NAV:
 			return {
 				linksColor: "text-primary-100",
+				linkspseudo: "",
 				logo: logoBlue,
 				fullLogo: fullLogoBlue,
 				dropdown: dropdownBlue,
 				hamburguer: hamburguerBlue,
 				loginColor: "button auth",
 				registerColor: "button auth auth--blue",
-			};
-		case navActions.SET_LIGHT_NAV:
-			return {
-				linksColor: "text-neutral-1000",
-				logo: logoBlue,
-				fullLogo: fullLogoBlue,
-				dropdown: dropdownBlue,
-				hamburguer: hamburguerBlue,
-				loginColor: "button auth auth--light",
-				registerColor: "button auth auth--light",
 			};
 		default:
 			return state;

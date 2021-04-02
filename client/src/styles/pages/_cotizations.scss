@@ -96,24 +96,3 @@
 		color: var(--clr-neutral-600);
 	}
 }
-
-.explanation {
-	margin-bottom: 10rem;
-	img {
-		max-width: 90%;
-	}
-	&__description {
-		margin-top: 2rem;
-		margin-left: 5rem;
-		width: 30%;
-		text-align: center;
-
-		@include mq("small-medium") {
-			width: 75%;
-			margin-left: 0rem;
-		}
-		p {
-			font-size: 1.1rem;
-		}
-	}
-}

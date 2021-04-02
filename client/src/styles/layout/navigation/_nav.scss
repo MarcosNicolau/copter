@@ -32,7 +32,7 @@
 		@include pseudo($loc: "after") {
 			height: 0.1rem;
 			width: 0%;
-			background-color: var(--clr-neutral-1000);
+			background-color: var(--clr-primary-100);
 			@include transition;
 		}
 
@@ -40,5 +40,9 @@
 			width: 100%;
 			@include transition;
 		}
+	}
+
+	&__links--light::after {
+		background-color: var(--clr-neutral-1000);
 	}
 }

@@ -22,7 +22,6 @@ const CryptoChart = () => {
 
 	//Set a default value for the datapoint
 	useEffect(() => {
-		if (!prices) return;
 		datapoint.current.innerText = prices.length ? `$ ${prices[prices.length - 1]}` : "-";
 	}, [prices, datapoint.currentt]);
 

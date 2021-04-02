@@ -5,15 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node server/server",
-        "heroku-postbuild": "NODE_MODULES_CACHE=false cd client && npm install && npm run build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/MarcosNicolau/copter.git"
-    },
-    "engines": {
-        "node": "14.15.5",
-        "npm": "6.14.11"
+        "heroku-postbuild": "cd client && npm install && npm run build"
     },
     "keywords": [],
     "author": "",

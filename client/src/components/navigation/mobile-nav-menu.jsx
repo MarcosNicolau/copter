@@ -22,7 +22,7 @@ const MobileNavMenu = ({ isNavOpen, setNavState }) => {
 					</a>
 				</li>
 				<li>
-					<a href="/nostros" className="mobile-nav-menu__links">
+					<a href="/nosotros" className="mobile-nav-menu__links">
 						<h5>Nosotros</h5>
 					</a>
 				</li>

@@ -1,0 +1,122 @@
+@use '../abstracts' as *;
+
+.who-we-are {
+	padding-top: 10rem;
+	img {
+		max-height: 25rem;
+	}
+
+	&__text {
+		& > * {
+			text-align: left;
+		}
+	}
+	&__title {
+		align-self: start;
+		font-size: var(--fs-650);
+		margin-bottom: 1rem;
+	}
+}
+
+.our-team {
+	&__title {
+		padding-left: 5rem;
+		padding-bottom: 1rem;
+		@include border;
+		@include mq("all") {
+			padding-left: 0;
+		}
+	}
+
+	&__members {
+		grid-gap: 5rem;
+		@include mq("all") {
+			grid-gap: 2.5rem;
+		}
+	}
+	&__member {
+		margin: 1.5rem 0;
+		h5 {
+			font-weight: 600;
+		}
+		&__profile {
+			padding: 0.5rem;
+			@include border($position: false);
+			border-radius: 50%;
+			max-height: 15rem;
+			max-width: 15rem;
+		}
+		p {
+			width: 90%;
+			text-align: center;
+		}
+	}
+}
+
+.reviews {
+	@include mq("small-medium") {
+		max-width: 95%;
+	}
+	@include mq("large") {
+		max-width: 90%;
+	}
+	&__comments {
+		@include mq("small-medium") {
+			flex-direction: column;
+		}
+	}
+
+	&__bubble {
+		text-align: center;
+		flex-wrap: nowrap;
+		margin: 0rem 3rem 2rem;
+		border-radius: 50%;
+		padding: 4rem;
+		height: 22rem;
+		width: 22rem;
+		font-family: "Noto Sans JP";
+
+		@include mq("large") {
+			margin: 0 1.5rem 2rem;
+		}
+
+		@include mq("small-medium") {
+			margin: 0 0rem 2rem;
+		}
+
+		@include mq("small") {
+			height: 19rem;
+			width: 19rem;
+		}
+
+		&:nth-child(3) {
+			@include mq("small-medium") {
+				order: 3;
+			}
+		}
+	}
+
+	&__owner {
+		margin-top: 1rem;
+		padding-top: 0.5rem;
+		width: 100%;
+		@include border($position: top, $color: var(--clr-neutral-0));
+	}
+}
+
+.about-cta {
+	&__text {
+		text-align: center;
+		p {
+			width: 60%;
+			font-size: var(--fs-500);
+			margin: 1rem auto 0;
+			@include mq("medium-large") {
+				width: 75%;
+			}
+			@include mq("small-medium") {
+				width: 100%;
+			}
+		}
+	}
+}

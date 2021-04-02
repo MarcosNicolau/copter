@@ -44,6 +44,7 @@ p {
 	line-height: 150%;
 	font-weight: 500;
 	color: var(--clr-neutral-400);
+	margin-bottom: 1rem;
 }
 
 .section-title {
@@ -67,6 +68,10 @@ p {
 	@include mq("medium") {
 		font-size: var(--fs-450);
 	}
+}
+
+.text-left {
+	text-align: left;
 }
 
 a {

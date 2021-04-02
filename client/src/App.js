@@ -17,6 +17,7 @@ import Home from "./components/home";
 import BitcoinCotization from "./components/cotizations/pages/bitcoin";
 import EthereumCotization from "./components/cotizations/pages/ethereum";
 import ReserveCotization from "./components/cotizations/pages/reserve";
+import About from "./components/about";
 
 const App = () => {
 	useEffect(() =>
@@ -34,6 +35,7 @@ const App = () => {
 				<Navigation />
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route path="/nosotros" component={About} />
 					<CryptoContextProvider>
 						<Route exact path="/cotizaciones/bitcoin" component={BitcoinCotization} />
 						<Route exact path="/cotizaciones/ethereum" component={EthereumCotization} />

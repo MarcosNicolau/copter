@@ -6,7 +6,7 @@ import AuthBtns from "./auth-btns.jsx";
 
 const Nav = () => {
 	const {
-		state: { linksColor, logo },
+		state: { linksColor, logo, linkspseudo },
 	} = useNavContext();
 	return (
 		<div className="nav-container" data-aos="fade-down" data-aos-duration="1000">
@@ -23,7 +23,7 @@ const Nav = () => {
 						</Dropdown>
 					</li>
 					<li>
-						<a href="/nosotros" className="nav__links">
+						<a href="/nosotros" className={`nav__links ${linkspseudo}`}>
 							Nostros
 						</a>
 					</li>

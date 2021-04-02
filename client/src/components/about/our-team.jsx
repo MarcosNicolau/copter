@@ -1,0 +1,62 @@
+import React from "react";
+import linkedinIcon from "../../assets/company/contact/linkedin-2.svg";
+import hernan from "../../assets/company/team/hernan.svg";
+import ignacio from "../../assets/company/team/ignacio.svg";
+import stefania from "../../assets/company/team/stefania.svg";
+import leandro from "../../assets/company/team/leandro.svg";
+
+const TeamMember = ({ photo, name, position, linkedin }) => {
+	return (
+		<div className="flex-column-center  our-team__member">
+			<img src={photo} alt={name} className="our-team__member__profile" />
+			<h5>{name}</h5>
+			<p>{position}</p>
+			<a href={`https://www.linkedin.com/in/${linkedin}`}>
+				<img src={linkedinIcon} alt="linkedin" />
+			</a>
+		</div>
+	);
+};
+
+const OurTeam = () => {
+	return (
+		<section>
+			<div className="container space our-team">
+				<div className="our-team__title">
+					<h2 className="title text-left">Nuestro equipo</h2>
+					<p className="snippet text-left">
+						Contrary to popular belief, Lorem Ipsum is not simply random text.
+					</p>
+				</div>
+				<div className="flex-row-center text-neutral-0 our-team__members">
+					<TeamMember
+						photo={hernan}
+						name="Hernan Cantarin"
+						position="Chief Executive Officer"
+						linkedin="/"
+					/>
+					<TeamMember
+						photo={ignacio}
+						name="Ignacio Manzanel"
+						position="Chief Operating Officer"
+						linkedin="/"
+					/>
+					<TeamMember
+						photo={stefania}
+						name="Stefania Wetzel"
+						position="Community Manager"
+						linkedin="/"
+					/>
+					<TeamMember
+						photo={leandro}
+						name="Leandro.A. Duran"
+						position="Marketing Advisor"
+						linkedin="/"
+					/>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default OurTeam;
