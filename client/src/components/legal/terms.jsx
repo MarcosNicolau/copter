@@ -11,7 +11,7 @@ const Terms = () => {
 				<LegalTitle>
 					Terminos y condiciones{" "}
 					<span className="break">
-						Uso del sitio <span className="font-wght-500">exchangecopter.com</span>
+						Uso del sitio <span className="font-wght-500">exchangecopter</span>
 					</span>
 				</LegalTitle>
 				<div className="container legal__text">
