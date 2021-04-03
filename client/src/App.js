@@ -23,6 +23,9 @@ const About = lazy(() => import("./components/about"));
 const Terms = lazy(() => import("./components/legal/terms"));
 const Privacity = lazy(() => import("./components/legal/privacity"));
 
+//Loading screen
+import LoadingScreen from "./components/shared/components/loaders/loading-screen";
+
 const App = () => {
 	useEffect(
 		() =>
@@ -37,13 +40,7 @@ const App = () => {
 	);
 	return (
 		<Router>
-			<Suspense
-				fallback={
-					<div className="loading">
-						<h1>Loading...</h1>
-					</div>
-				}
-			>
+			<Suspense fallback={<LoadingScreen />}>
 				<NavContextProvider>
 					<Navigation />
 					<Switch>

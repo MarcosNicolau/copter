@@ -10,6 +10,7 @@ const CryptoChart = () => {
 		state: {
 			data: { prices },
 			ranges,
+			error,
 		},
 	} = useChartContext();
 
@@ -51,6 +52,7 @@ const CryptoChart = () => {
 						height="100%"
 					/>
 				</div>
+				{error && error}
 			</div>
 		</section>
 	);

@@ -1,6 +1,7 @@
 import React from "react";
 import { usePriceContext } from "./context";
 import { useCryptoContext } from "../context";
+import DotsLoader from "../../shared/components/loaders/dots-loader";
 
 const Price = () => {
 	const {
@@ -11,6 +12,7 @@ const Price = () => {
 			valoration: { rate, arrow, color },
 			price: { ask, bid },
 			pairs,
+			error,
 		},
 		dispatch,
 		priceActions,
@@ -38,16 +40,16 @@ const Price = () => {
 						<div className="flex-row-center price__prices">
 							<div>
 								<h5>Compra</h5>
-								<h1>${ask ? ask : "-"}</h1>
+								<h1>${ask ? ask : <DotsLoader />}</h1>
 							</div>
 							<div>
 								<h5>Venta</h5>
-								<h1>${bid ? bid : "-"}</h1>
+								<h1>${bid ? bid : <DotsLoader />}</h1>
 							</div>
 							<div>
 								<h5>Valoracion</h5>
 								<div className="flex-row-center">
-									<h1 className={color}>{rate ? rate : "-"}</h1>
+									<h1 className={color}>{rate ? rate : <DotsLoader />}</h1>
 									{arrow && <img src={arrow} alt="valoration" />}
 								</div>
 							</div>
@@ -65,6 +67,7 @@ const Price = () => {
 								</option>
 							))}
 						</select>
+						{error && error}
 					</div>
 				</div>
 			</div>

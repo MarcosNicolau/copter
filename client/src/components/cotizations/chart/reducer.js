@@ -11,11 +11,13 @@ const chartState = {
 		YEARLY: "yearly",
 	},
 	activeDate: "yearly",
+	error: null,
 };
 
 const chartActions = {
 	SET_DATA: "set-data",
 	SET_DATE: "set-date",
+	SET_ERROR: "set-error",
 };
 
 const chartReducer = (state, action) => {
@@ -27,11 +29,14 @@ const chartReducer = (state, action) => {
 				data: {
 					prices: payload.prices,
 					timestamps: payload.timestamps,
+					error: payload.error,
 				},
 				activeDate: payload.activeDate,
 			};
 		case chartActions.SET_DATE:
 			return setDate(state, payload);
+		case chartActions.SET_ERROR:
+			return { ...state, error: payload };
 		default:
 			return { ...state };
 	}

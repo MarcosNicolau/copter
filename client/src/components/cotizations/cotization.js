@@ -7,6 +7,7 @@ import Price from "./price/price.jsx";
 const CryptoChart = lazy(() => import("./chart/chart.jsx"));
 import Explanation from "./explanation/explanation.jsx";
 import StartOperate from "../shared/components/start-operate";
+import LoadingScreen from "../shared/components/loaders/loading-screen";
 
 const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	const { state: cryptoState, cryptoActions, dispatch: cryptoDispatch } = useCryptoContext();
@@ -25,6 +26,7 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 		});
 	}, [priceDispatch, priceActions]);
 
+	//Set crypto explanation
 	useEffect(() => {
 		explanationDispatch({
 			type: explanationActions.SET_INFO,
@@ -34,11 +36,13 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 		});
 	}, []);
 
+	//Get the chart data only if the crypto is stable
 	useEffect(() => {
 		if (!cryptoState.abbr || !chart) return;
 		getChartData(`${new Date().getFullYear()}-01-01`, chartState.ranges.YEARLY);
 	}, [cryptoState.abbr]);
 
+	//Set all the general crypto information
 	useEffect(() => {
 		cryptoDispatch({
 			type: cryptoActions.SET_CRYPTO,
@@ -54,13 +58,7 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	}, []);
 
 	return (
-		<Suspense
-			fallback={
-				<div className="loading">
-					<h1>Loading...</h1>
-				</div>
-			}
-		>
+		<Suspense fallback={<LoadingScreen />}>
 			<Price />
 			{chart && <CryptoChart />}
 			<Explanation />

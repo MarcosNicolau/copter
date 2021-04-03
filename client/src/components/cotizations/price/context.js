@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useReducer } from "react";
 import priceReducer, { priceState, priceActions } from "./reducer";
 import { useCryptoContext } from "../context";
 import axios from "axios";
+import Error from "../../shared/components/error";
 
 const PriceContext = createContext("");
 const usePriceContext = () => useContext(PriceContext);
@@ -14,12 +15,19 @@ const PriceContextProvider = ({ children }) => {
 
 	const getPriceData = async () => {
 		const endpoint = `/get-price-data`;
-		const res = await axios.post(endpoint, { cryptoPair: `${abbr}${state.currency}` });
-		const data = res.data;
-		dispatch({
-			type: priceActions.SET_PRICE,
-			payload: { ask: data.ask, bid: data.bid, priceChange: data.price_24h_change },
-		});
+		try {
+			const res = await axios.post(endpoint, { cryptoPair: `${abbr}${state.currency}` });
+			const data = res.data;
+			dispatch({
+				type: priceActions.SET_PRICE,
+				payload: { ask: data.ask, bid: data.bid, priceChange: data.price_24h_change },
+			});
+		} catch (err) {
+			dispatch({
+				type: priceActions.SET_ERROR,
+				payload: <Error />,
+			});
+		}
 	};
 
 	//Gets the pricing everytime the currency changes and sets an interval.

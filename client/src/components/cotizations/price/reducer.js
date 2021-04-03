@@ -14,12 +14,14 @@ const priceState = {
 	},
 	currency: undefined,
 	pairs: [],
+	error: null,
 };
 
 const priceActions = {
 	SET_CURRENCY: "set-selected-currency",
 	SET_PAIRS: "set-pairs",
 	SET_PRICE: "set-price",
+	SET_ERROR: "set-error",
 };
 
 const priceReducer = (state, action) => {
@@ -31,6 +33,8 @@ const priceReducer = (state, action) => {
 			return { ...state, pairs: payload };
 		case priceActions.SET_CURRENCY:
 			return { ...state, currency: payload };
+		case priceActions.SET_ERROR:
+			return { ...state, error: payload };
 		default:
 			return state;
 	}

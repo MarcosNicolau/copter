@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import chartReducer, { chartActions, chartState } from "./reducer";
 import { useCryptoContext } from "../context";
+import Error from "../../shared/components/error";
 
 const ChartContext = createContext("");
 
@@ -15,15 +16,22 @@ const ChartContextProvider = ({ children }) => {
 
 	const getChartData = async (timestamp, range) => {
 		const endpoint = `/get-chart-data`;
-		const res = await axios.post(endpoint, { crypto: abbr, timestamp });
-		dispatch({
-			type: chartActions.SET_DATA,
-			payload: {
-				prices: res.data.prices,
-				timestamps: res.data.timestamps,
-				activeDate: range,
-			},
-		});
+		try {
+			const res = await axios.post(endpoint, { crypto: abbr, timestamp });
+			dispatch({
+				type: chartActions.SET_DATA,
+				payload: {
+					prices: res.data.prices,
+					timestamps: res.data.timestamps,
+					activeDate: range,
+				},
+			});
+		} catch (err) {
+			dispatch({
+				type: chartActions.SET_ERROR,
+				payload: <Error />,
+			});
+		}
 	};
 
 	return (
