@@ -13,8 +13,17 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser({ extended: true }));
 
+const setCacheHeaders = () => {
+    res.setHeader('Cache-Control', 'public, max-age=31536000');
+};
+
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '..', 'client', 'build'), { maxAge: '31536000' }));
+    app.use(
+        express.static(path.join(__dirname, '..', 'client', 'build'), {
+            maxAge: '31536000',
+            setHeaders: setCacheHeaders,
+        })
+    );
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
