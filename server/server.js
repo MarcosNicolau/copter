@@ -14,8 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
-    res.set('Cache-control', 'public, max-age=31536000');
-    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build'), { maxAge: '31536000' }));
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
