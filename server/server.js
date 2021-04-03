@@ -13,15 +13,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser({ extended: true }));
 
-const cache = {
-    maxAge: 31536000,
-    setHeaders: (req, res) => {
-        res.set({ 'Cache-Control': 'public, max-age=31536000' });
-    },
-};
-
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '..', 'client', 'build'), cache));
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
