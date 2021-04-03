@@ -5,14 +5,15 @@ import drawCanvas from "./canvas";
 
 const Hero = () => {
 	const canvas = useRef();
+
 	const canvasResize = (e) => {
-		if (e.target.innerWidth <= 1000) return;
 		drawCanvas(canvas.current, e.target.innerWidth);
 	};
+
 	useEffect(() => {
 		drawCanvas(canvas.current, window.innerWidth);
-		const canvasInterval = window.addEventListener("resize", canvasResize);
-		return () => window.clearInterval(canvasInterval);
+		window.addEventListener("resize", canvasResize);
+		return () => window.removeEventListener("reset", canvasResize);
 	}, [canvas.current]);
 
 	return (

@@ -36,6 +36,9 @@
 	&__logo {
 		height: 3.2rem;
 		margin-top: 1.5rem;
+		@include mq("small-medium") {
+			height: 2.5rem;
+		}
 	}
 
 	&__snippet {

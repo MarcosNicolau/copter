@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { useCryptoContext } from "./context";
 import { usePriceContext } from "./price/context";
 import { useExplanationContext } from "./explanation/context";
 import { useChartContext } from "./chart/context";
 import Price from "./price/price.jsx";
-import CryptoChart from "./chart/chart.jsx";
+const CryptoChart = lazy(() => import("./chart/chart.jsx"));
 import Explanation from "./explanation/explanation.jsx";
 import StartOperate from "../shared/components/start-operate";
 
@@ -54,12 +54,12 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	}, []);
 
 	return (
-		<>
+		<Suspense fallback={<div>Loading...</div>}>
 			<Price />
 			{chart && <CryptoChart />}
 			<Explanation />
 			<StartOperate />
-		</>
+		</Suspense>
 	);
 };
 

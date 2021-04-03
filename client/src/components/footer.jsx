@@ -13,10 +13,16 @@ const Footer = () => {
 						<div className="flex-column-center">
 							<img src={fullLogoLight} alt="copter logo" className="footer__logo" />
 							<div className="flex-column footer__auth-btns">
-								<a href="" className="button auth auth--light">
+								<a
+									href="https://app.exchangecopter.com/signup"
+									className="button auth auth--light"
+								>
 									Registrate
 								</a>
-								<a href="" className="button auth">
+								<a
+									href="https://app.exchangecopter.com/login"
+									className="button auth"
+								>
 									Acceder
 								</a>
 							</div>

@@ -28,19 +28,21 @@ function Star(ctx, canvas) {
 const drawCanvas = (canvas, windowWidth) => {
 	const ctx = canvas.getContext("2d");
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	const number = windowWidth <= 1000 ? 15 : 200;
+	const number = windowWidth <= 1000 ? 20 : 200;
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	const stars = [];
 	for (let i = 0; i <= number; i++) {
 		stars.push(new Star(ctx, canvas));
 	}
-	const updateCanvas = () => {
+
+	const animate = () => {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		stars.forEach((star) => star.update());
+		if (windowWidth < 1000) return;
+		window.requestAnimationFrame(animate), [100];
 	};
-	if (window.animation) window.clearInterval(window.animation);
-	window.animation = window.setInterval(updateCanvas, 100);
+	animate();
 };
 
 export default drawCanvas;
