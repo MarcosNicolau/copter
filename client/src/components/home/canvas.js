@@ -1,10 +1,10 @@
 function Star(ctx, canvas) {
 	const x = Math.random() * canvas.offsetWidth;
 	const y = Math.random() * canvas.offsetHeight;
-	const maxShadow = 10;
-	const minShadow = 1;
+	// const maxShadow = 10;
+	// const minShadow = 1;
 	let shadowblur = Math.floor(Math.random() * 10) + 1;
-	let incrementer = 1;
+	// let incrementer = 1;
 
 	this.draw = () => {
 		ctx.fillStyle = "white";
@@ -13,13 +13,6 @@ function Star(ctx, canvas) {
 		ctx.fill();
 		ctx.shadowColor = "white";
 		ctx.shadowBlur = shadowblur;
-	};
-
-	this.update = () => {
-		if (shadowblur === maxShadow) incrementer = -1;
-		if (shadowblur === minShadow) incrementer = +1;
-		shadowblur += incrementer;
-		this.draw();
 	};
 
 	this.draw();
@@ -35,14 +28,6 @@ const drawCanvas = (canvas, windowWidth) => {
 	for (let i = 0; i <= number; i++) {
 		stars.push(new Star(ctx, canvas));
 	}
-
-	const animate = () => {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		stars.forEach((star) => star.update());
-		if (windowWidth < 1000) return;
-		window.requestAnimationFrame(animate), [100];
-	};
-	animate();
 };
 
 export default drawCanvas;

@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const fetch = require('node-fetch');
+const getChartData = require('./get-chart-data');
+const getPriceData = require('./get-price-data');
 require('dotenv').config();
 
 const app = express();
@@ -18,24 +19,8 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
 }
-app.post('/get-chart-data', async (req, res) => {
-    const { crypto, timestamp } = req.body;
-    const endpoint = `https://api.nomics.com/v1/currencies/sparkline?key=${process.env.NOMICS_KEY}&ids=${crypto}&start=${timestamp}T00%3A00%3A00Z`;
-    const data = await fetch(endpoint, {});
-    const parsedData = await data.json();
-    const timestamps = parsedData[0].timestamps.map((timestamp) =>
-        new Date(timestamp).toDateString()
-    );
-    res.send({ prices: parsedData[0].prices, timestamps });
-});
 
-app.post('/get-price-data', async (req, res) => {
-    const cryptoPair = req.body.cryptoPair;
-    const endpoint = `https://exchange-data-service.cryptosrvc.com/v1/quotes?exchange=COPTER`;
-    const response = await fetch(endpoint);
-    const data = await response.json();
-    const pair = data.find((crypto) => crypto.pair === cryptoPair);
-    res.send(pair);
-});
+app.post('/get-chart-data', getChartData);
+app.post('/get-price-data', getPriceData);
 
 app.listen(PORT);

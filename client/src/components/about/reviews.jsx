@@ -26,10 +26,10 @@ const Reviews = () => {
 					<Comment owner="Marta Ciguena" bgColor="true" animation="fade-right" delay="0">
 						“El mejor lugar para comprar bitcoin, super recomendable!!”
 					</Comment>
-					<Comment owner="Marta Ciguena" animation="fade-left" delay="400">
+					<Comment owner="Marta Ciguena" animation="fade-left" delay="600">
 						“El mejor lugar para comprar bitcoin, super recomendable!!”
 					</Comment>
-					<Comment owner="Marta Ciguena" animation="fade-right" delay="300">
+					<Comment owner="Marta Ciguena" animation="fade-right" delay="400">
 						“El mejor lugar para comprar bitcoin, super recomendable!!”
 					</Comment>
 					<Comment owner="Marta Ciguena" bgColor="true" animation="fade-left" delay="200">

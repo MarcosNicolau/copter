@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React, { lazy, Suspense, useEffect } from "react";
-import Aos from "aos";
+import AOS from "aos";
 import "./styles/style.scss";
 import "aos/dist/aos.css";
 
@@ -29,12 +29,11 @@ import LoadingScreen from "./components/shared/components/loaders/loading-screen
 const App = () => {
 	useEffect(
 		() =>
-			Aos.init({
+			AOS.init({
 				once: "false",
 				easing: "ease",
 				duration: 1200,
 				disable: "mobile",
-				offset: "100",
 			}),
 		[]
 	);

@@ -3,11 +3,11 @@
 .navigation-container {
 	position: absolute;
 	z-index: 100;
-	top: 0;
 	width: 100%;
 }
 
 .desktop-nav {
+	animation: fade-down 1000ms ease;
 	//Display only on desktop and large devices
 	@include mq("small-medium") {
 		display: none;
@@ -17,7 +17,6 @@
 .nav {
 	margin-top: 1rem;
 	font-size: var(--fs-450);
-	width: 100%;
 
 	&__logo {
 		height: 2.5rem;
@@ -46,5 +45,18 @@
 
 	&__links--light::after {
 		background-color: var(--clr-neutral-1000);
+	}
+}
+
+@keyframes fade-down {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+		pointer-events: none;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+		pointer-events: all;
 	}
 }

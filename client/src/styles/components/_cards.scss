@@ -12,6 +12,10 @@
 		color: var(--clr-neutral-0);
 	}
 
+	p {
+		margin: 0;
+	}
+
 	&__img-container {
 		display: flex;
 		justify-content: center;

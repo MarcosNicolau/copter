@@ -1,25 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback } from "react";
 import heroIllustration from "../../assets/illustrations/home/hero.svg";
 import fullLogoLight from "../../assets/company/full-logo-light.svg";
 import drawCanvas from "./canvas";
 
 const Hero = () => {
-	const canvas = useRef();
-
 	const canvasResize = (e) => {
-		drawCanvas(canvas.current, e.target.innerWidth);
+		drawCanvas(document.querySelector("canvas"), e.target.innerWidth);
 	};
 
-	useEffect(() => {
-		drawCanvas(canvas.current, window.innerWidth);
+	const canvasRef = useCallback((canvas) => {
+		drawCanvas(canvas, window.innerWidth);
 		window.addEventListener("resize", canvasResize);
-		return () => window.removeEventListener("reset", canvasResize);
-	}, [canvas.current]);
+		return () => window.removeEventListener("resize", canvasResize);
+	}, []);
 
 	return (
 		<section>
 			<div className="view-100 hero">
-				<canvas ref={canvas}></canvas>
+				<canvas ref={canvasRef}></canvas>
 				<div className="container flex-row-between hero__container">
 					<div className="hero__title">
 						<h1 data-aos="fade-up" data-aos-delay="300">
