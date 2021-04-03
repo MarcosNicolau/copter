@@ -18,12 +18,9 @@ const setCacheHeaders = () => {
 };
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(
-        express.static(path.join(__dirname, '..', 'client', 'build'), {
-            maxAge: 31536000,
-        })
-    );
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build'), { maxAge: 31536000 }));
     app.get('*', (req, res) => {
+        res.setHeader('Cache-Control', 'public, max-age=31536000');
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
     });
 }
