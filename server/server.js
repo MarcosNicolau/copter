@@ -20,8 +20,7 @@ const setCacheHeaders = () => {
 if (process.env.NODE_ENV === 'production') {
     app.use(
         express.static(path.join(__dirname, '..', 'client', 'build'), {
-            maxAge: '31536000',
-            setHeaders: setCacheHeaders,
+            maxAge: 31536000,
         })
     );
     app.get('*', (req, res) => {
