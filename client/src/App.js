@@ -39,8 +39,8 @@ const App = () => {
 		<Router>
 			<Suspense
 				fallback={
-					<div className="view-100 bg-primary-100 text-neutral-1000 flex-column-center">
-						Loading...
+					<div className="loading">
+						<h1>Loading...</h1>
 					</div>
 				}
 			>

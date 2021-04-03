@@ -54,7 +54,13 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	}, []);
 
 	return (
-		<Suspense fallback={<div>Loading...</div>}>
+		<Suspense
+			fallback={
+				<div className="loading">
+					<h1>Loading...</h1>
+				</div>
+			}
+		>
 			<Price />
 			{chart && <CryptoChart />}
 			<Explanation />
