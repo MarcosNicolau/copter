@@ -5,8 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "node server",
-        "dev": "nodemon server",
-        "heroku-postbuild": "cd ../client && npm install && npm run build"
+        "dev": "nodemon server"
     },
     "engines": {
         "node": "14.15.5",
@@ -20,8 +19,6 @@
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "helmet": "^4.4.1",
-        "node-fetch": "^2.6.1",
-        "socket.io": "^4.0.1",
-        "ws": "^7.4.4"
+        "node-fetch": "^2.6.1"
     }
 }
