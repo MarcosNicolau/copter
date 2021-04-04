@@ -17,6 +17,7 @@ const Home = lazy(() => import("./components/home"));
 const BitcoinCotization = lazy(() => import("./components/cotizations/pages/bitcoin"));
 const EthereumCotization = lazy(() => import("./components/cotizations/pages/ethereum"));
 const ReserveCotization = lazy(() => import("./components/cotizations/pages/reserve"));
+const ReserveRightsCotization = lazy(() => import("./components/cotizations/pages/reserve-rights"));
 const About = lazy(() => import("./components/about"));
 
 //Legal
@@ -52,6 +53,10 @@ const App = () => {
 							<Route path="/cotizaciones/bitcoin" component={BitcoinCotization} />
 							<Route path="/cotizaciones/ethereum" component={EthereumCotization} />
 							<Route path="/cotizaciones/reserve" component={ReserveCotization} />
+							<Route
+								path="/cotizaciones/reserverights"
+								component={ReserveRightsCotization}
+							/>
 						</CryptoContextProvider>
 					</Switch>
 				</NavContextProvider>

@@ -1,58 +1,46 @@
-import React, { useCallback } from "react";
+import React from "react";
 import heroIllustration from "../../assets/illustrations/home/hero.svg";
 import fullLogoLight from "../../assets/company/full-logo-light.svg";
-import drawCanvas from "./canvas";
 
 const Hero = () => {
-	const canvasResize = (e) => {
-		if (e.target.innerWidth < 900) return;
-		const starsNumber = e.target.innerWidth <= 1000 ? 20 : 200;
-		drawCanvas(document.querySelector("canvas"), starsNumber);
-	};
-
-	const canvasRef = useCallback((canvas) => {
-		const starsNumber = window.innerWidth <= 1000 ? 20 : 200;
-		drawCanvas(canvas, starsNumber);
-		window.addEventListener("resize", canvasResize);
-		return () => window.removeEventListener("resize", canvasResize);
-	}, []);
-
 	return (
-		<section>
-			<div className="view-100 hero">
-				<canvas ref={canvasRef}></canvas>
-				<div className="container flex-row-between hero__container">
-					<div className="hero__title">
-						<h1 data-aos="fade-up" data-aos-delay="300">
-							Sumate a la revolucion <span className="break">de las cryptos con</span>
-							<img src={fullLogoLight} alt="copter" className="hero__logo" />
-						</h1>
-						<p
-							data-aos="fade-up"
-							data-aos-delay="400"
-							className="hero__snippet text-secondary-300 font-wght-700"
-						>
-							Compra y vende cryptos desde un exchange legal y seguro
-						</p>
-						<div data-aos="fade-up" data-aos-delay="500">
-							<a
-								href="https://app.exchangecopter.com/signup"
-								className="button cta cta--white hero__cta"
+		<>
+			<section>
+				<div className="view-100 hero">
+					<div className="container flex-row-between hero__container">
+						<div className="hero__title">
+							<h1 data-aos="fade-up" data-aos-delay="300">
+								Sumate a la revolucion{" "}
+								<span className="break">de las cryptos con</span>
+								<img src={fullLogoLight} alt="copter" className="hero__logo" />
+							</h1>
+							<p
+								data-aos="fade-up"
+								data-aos-delay="400"
+								className="hero__snippet text-secondary-300 font-wght-700"
 							>
-								Comenzar
-							</a>
+								Compra y vende cryptos desde un exchange legal y seguro
+							</p>
+							<div data-aos="fade-up" data-aos-delay="500">
+								<a
+									href="https://app.exchangecopter.com/signup"
+									className="button cta cta--white hero__cta"
+								>
+									Comenzar
+								</a>
+							</div>
 						</div>
+						<img
+							className="universe"
+							src={heroIllustration}
+							alt="our universe"
+							data-aos="fade-left"
+							data-aos-delay="400"
+						/>
 					</div>
-					<img
-						className="universe"
-						src={heroIllustration}
-						alt="our universe"
-						data-aos="fade-left"
-						data-aos-delay="400"
-					/>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

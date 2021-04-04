@@ -11,7 +11,7 @@
 	&__step {
 		margin: 0 2rem;
 		text-align: center;
-		color: var(--clr-primary-200);
+		color: inherit;
 		@include mq("small-medium") {
 			margin: 4rem 0rem;
 		}
@@ -29,9 +29,16 @@
 	&__line {
 		width: 12rem;
 		height: 0.15rem;
-		background-color: var(--clr-neutral-0);
 		@include mq("small-medium") {
 			display: none;
 		}
+	}
+
+	&__line--light {
+		background-color: var(--clr-neutral-1000);
+	}
+
+	&__line--dark {
+		background-color: var(--clr-neutral-0);
 	}
 }

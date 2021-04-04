@@ -11,7 +11,7 @@ const TeamMember = ({ photo, name, position, linkedin }) => {
 			<img src={photo} alt={name} className="our-team__member__profile" />
 			<h5>{name}</h5>
 			<p>{position}</p>
-			<a href={`https://www.linkedin.com/in/${linkedin}`}>
+			<a href={linkedin}>
 				<img src={linkedinIcon} alt="linkedin" />
 			</a>
 		</div>
@@ -33,13 +33,13 @@ const OurTeam = () => {
 						photo={hernan}
 						name="Hernan Cantarin"
 						position="Chief Executive Officer"
-						linkedin="/"
+						linkedin="https://www.linkedin.com/in/hernan-cantarin-a82b75a3/"
 					/>
 					<TeamMember
 						photo={ignacio}
 						name="Ignacio Manzanel"
 						position="Chief Operating Officer"
-						linkedin="/"
+						linkedin="https://www.linkedin.com/in/ignacio-manzanel-b509661a9/"
 					/>
 					<TeamMember
 						photo={stefania}
@@ -51,7 +51,7 @@ const OurTeam = () => {
 						photo={leandro}
 						name="Leandro.A. Duran"
 						position="Marketing Advisor"
-						linkedin="/"
+						linkedin="https://www.linkedin.com/in/leandro-alvarez-duran-a70b90131/"
 					/>
 				</div>
 			</div>

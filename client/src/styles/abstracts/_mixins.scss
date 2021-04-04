@@ -88,11 +88,11 @@
 	box-shadow: 0px 4px 20px $color;
 }
 
-@mixin border($color: var(--clr-neutral-800), $position: bottom) {
+@mixin border($color: var(--clr-neutral-800), $position: bottom, $size: 0.09rem) {
 	@if ($position) {
-		border-#{$position}: 0.09rem solid $color;
+		border-#{$position}: $size solid $color;
 	} @else {
-		border: 0.09rem solid $color;
+		border: $size solid $color;
 	}
 }
 

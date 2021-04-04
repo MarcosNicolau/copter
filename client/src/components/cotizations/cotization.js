@@ -24,7 +24,13 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 			type: priceActions.SET_PAIRS,
 			payload: pairs,
 		});
-	}, [priceDispatch, priceActions]);
+	}, [priceDispatch, priceActions, currency, pairs]);
+
+	//Get the chart data only if the crypto is stable
+	useEffect(() => {
+		if (!cryptoState.abbr || !chart) return;
+		getChartData(`${new Date().getFullYear()}-01-01`, chartState.ranges.YEARLY);
+	}, [cryptoState.abbr]);
 
 	//Set crypto explanation
 	useEffect(() => {
@@ -34,13 +40,7 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 				explanation,
 			},
 		});
-	}, []);
-
-	//Get the chart data only if the crypto is stable
-	useEffect(() => {
-		if (!cryptoState.abbr || !chart) return;
-		getChartData(`${new Date().getFullYear()}-01-01`, chartState.ranges.YEARLY);
-	}, [cryptoState.abbr]);
+	}, [explanationDispatch, explanationActions, explanation]);
 
 	//Set all the general crypto information
 	useEffect(() => {
@@ -55,7 +55,7 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 				color,
 			},
 		});
-	}, []);
+	}, [cryptoDispatch, cryptoActions, cryptoInfo]);
 
 	return (
 		<Suspense fallback={<LoadingScreen />}>

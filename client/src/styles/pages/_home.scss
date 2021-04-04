@@ -1,11 +1,13 @@
 @use '../abstracts' as *;
 
-.hero {
-	canvas {
-		position: absolute;
-	}
-	color: var(--clr-neutral-1000);
+.space-background {
+	position: absolute;
 	background: linear-gradient(108.69deg, #000444 0%, #6057ff 204.24%);
+	z-index: -1;
+}
+
+.hero {
+	color: var(--clr-neutral-1000);
 	position: relative;
 	overflow: hidden;
 
@@ -48,6 +50,7 @@
 }
 
 .features {
+	margin-bottom: 8rem;
 	&__illustration {
 		width: 45%;
 		@include mq("all") {
@@ -70,13 +73,7 @@
 .home-cta {
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(94.01deg, #000776 0%, #4b56ff 132.71%);
-	z-index: 100;
-
-	canvas {
-		position: absolute;
-		z-index: -1;
-	}
+	background: linear-gradient(113deg, #060a46 0%, #141b80 132.71%);
 
 	&__container {
 		flex-wrap: nowrap;

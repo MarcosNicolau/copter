@@ -18,7 +18,9 @@ const MobileNav = () => {
 	return (
 		<div className="mobile-nav-container container">
 			<div className="flex-row-between mobile-nav">
-				<img src={fullLogo} alt="logo" className="mobile-nav__logo" />
+				<a href="/">
+					<img src={fullLogo} alt="logo" className="mobile-nav__logo" />
+				</a>
 				<img src={hamburguer} alt="open nav" onClick={setNavState} />
 			</div>
 			<MobileNavMenu setNavState={setNavState} isNavOpen={isNavOpen} />

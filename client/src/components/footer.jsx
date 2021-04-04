@@ -33,7 +33,7 @@ const Footer = () => {
 								<a href="/cotizaciones/bitcoin">Bitcoin</a>
 								<a href="/cotizaciones/ethereum">Ethereum</a>
 								<a href="/cotizaciones/reserve">Reserve</a>
-								<a href="/cotizaciones/">Rsr</a>
+								<a href="/cotizaciones/reserverights">Reserve Rights</a>
 							</div>
 							<div className="flex-column footer__links">
 								<h5>Empresa</h5>

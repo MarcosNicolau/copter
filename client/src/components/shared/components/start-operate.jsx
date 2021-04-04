@@ -3,9 +3,10 @@ import SectionTitle from "./section-title";
 import budgetIcon from "../../../assets/icons/budget.svg";
 import buyCryptosIcon from "../../../assets/icons/buy-cryptos.svg";
 import valuationsIcon from "../../../assets/icons/valuations.svg";
-import AbstractBg from "./abstract-bg";
 
-const StartOperate = () => {
+const StartOperate = ({ lineColor }) => {
+	const lineBg =
+		lineColor === "light" ? "start-operate__line--light" : "start-operate__line--dark";
 	return (
 		<section>
 			<div className="space start-operate container">
@@ -16,21 +17,19 @@ const StartOperate = () => {
 				<div className="flex-row-center start-operate__steps">
 					<Step desc="Deposita pesos" icon={budgetIcon} />
 					<div
-						className="start-operate__line"
+						className={`start-operate__line ${lineBg}`}
 						data-aos="fade-left"
 						data-aos-delay="100"
 					></div>
 					<Step desc="Compra crypto" icon={buyCryptosIcon} delay="100" />
 					<div
-						className="start-operate__line"
+						className={`start-operate__line ${lineBg}`}
 						data-aos="fade-left"
 						data-aos-delay="300"
 					></div>
-					<Step desc="Compra crypto" icon={valuationsIcon} delay="400" />
+					<Step desc="Crece tus ahorros" icon={valuationsIcon} delay="400" />
 				</div>
 			</div>
-
-			<AbstractBg right="true" bottom="8rem" />
 		</section>
 	);
 };

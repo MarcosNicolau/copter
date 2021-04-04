@@ -1,13 +1,13 @@
 import React from "react";
-import initial from "../../../assets/cryptos/initial/rsv.svg";
-import logo from "../../../assets/cryptos/full/rsv.svg";
-import illustration from "../../../assets/illustrations/cotization/rsv.svg";
+import initial from "../../../assets/cryptos/initial/rsr.svg";
+import logo from "../../../assets/cryptos/full/rsr.svg";
+import illustration from "../../../assets/illustrations/cotization/rsr.svg";
 import Cotization from "../cotization";
 
 const ReserveCotization = () => {
 	const cryptoInfo = {
-		name: "Reserve",
-		abbr: "RSV",
+		name: "Reserve Rights",
+		abbr: "RSR",
 		initialLogo: initial,
 		logo: logo,
 		illustration: illustration,

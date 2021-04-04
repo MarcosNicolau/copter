@@ -19,8 +19,8 @@ const CotizationsLinks = () => {
 				</a>
 			</li>
 			<li>
-				<a className="nav__links" href="/cotizaciones/rsr">
-					RSR
+				<a className="nav__links" href="/cotizaciones/reserverights">
+					Reserve Rights
 				</a>
 			</li>
 		</>

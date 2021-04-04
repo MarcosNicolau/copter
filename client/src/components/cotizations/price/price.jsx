@@ -26,14 +26,9 @@ const Price = () => {
 			<div className="price">
 				<div className="price__background"></div>
 				<div className="container flex-row-center price__container view-100">
-					<img
-						src={initialLogo}
-						alt="crypto"
-						className="price__crypto-logo"
-						data-aos="fade-right"
-					/>
+					<img src={initialLogo} alt="crypto" className="price__crypto-logo" />
 					<div className="flex-column-center">
-						<div className="price__title" data-aos="fade">
+						<div className="price__title">
 							<h2>Cotizacion {name}</h2>
 							<h5>El valor de {name} en tiempo real</h5>
 						</div>
