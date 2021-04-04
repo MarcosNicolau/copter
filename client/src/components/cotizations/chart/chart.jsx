@@ -4,6 +4,7 @@ import { useCryptoContext } from "../context";
 import Chart from "react-apexcharts";
 import chartConfig from "./chart-config";
 import ChangeDateBtn from "./change-date-btn";
+import DotsLoader from "../../shared/components/loaders/dots-loader";
 
 const CryptoChart = () => {
 	const {
@@ -38,6 +39,7 @@ const CryptoChart = () => {
 					</div>
 					<div className="flex-column-center">
 						<h5>Valoracion:</h5>
+						{prices.length ? null : <DotsLoader color="var(--clr-primary-100)" />}
 						<h4 ref={datapoint}></h4>
 					</div>
 					<div className="flex-row chart__timestamps">

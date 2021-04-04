@@ -2,6 +2,7 @@ import React from "react";
 import { usePriceContext } from "./context";
 import { useCryptoContext } from "../context";
 import DotsLoader from "../../shared/components/loaders/dots-loader";
+import bitcoinInitial from "../../../assets/cryptos/initial/bitcoin.svg";
 
 const Price = () => {
 	const {
@@ -13,11 +14,11 @@ const Price = () => {
 			price: { ask, bid },
 			pairs,
 			error,
+			currency,
 		},
 		dispatch,
 		priceActions,
 	} = usePriceContext();
-
 	const updateCurrency = (e) =>
 		dispatch({ type: priceActions.SET_CURRENCY, payload: e.target.value });
 
@@ -25,7 +26,7 @@ const Price = () => {
 		<section>
 			<div className="price">
 				<div className="price__background"></div>
-				<div className="container flex-row-center price__container view-100">
+				<div className="large-container flex-row-center price__container view-100">
 					<img src={initialLogo} alt="crypto" className="price__crypto-logo" />
 					<div className="flex-column-center">
 						<div className="price__title">
@@ -35,11 +36,25 @@ const Price = () => {
 						<div className="flex-row-center price__prices">
 							<div>
 								<h5>Compra</h5>
-								<h1>${ask ? ask : <DotsLoader />}</h1>
+								<h1>
+									{currency === "BTC" ? (
+										<img src={bitcoinInitial} alt="BTC" />
+									) : (
+										"$"
+									)}
+									{ask ? ask : <DotsLoader />}
+								</h1>
 							</div>
 							<div>
 								<h5>Venta</h5>
-								<h1>${bid ? bid : <DotsLoader />}</h1>
+								<h1>
+									{currency === "BTC" ? (
+										<img src={bitcoinInitial} alt="BTC" />
+									) : (
+										"$"
+									)}
+									{bid ? bid : <DotsLoader />}
+								</h1>
 							</div>
 							<div>
 								<h5>Valoracion</h5>

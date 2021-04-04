@@ -32,7 +32,12 @@ const priceReducer = (state, action) => {
 		case priceActions.SET_PAIRS:
 			return { ...state, pairs: payload };
 		case priceActions.SET_CURRENCY:
-			return { ...state, currency: payload };
+			return {
+				...state,
+				currency: payload,
+				price: {},
+				valoration: {},
+			};
 		case priceActions.SET_ERROR:
 			return { ...state, error: payload };
 		default:

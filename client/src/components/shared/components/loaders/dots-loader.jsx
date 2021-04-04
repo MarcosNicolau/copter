@@ -1,11 +1,11 @@
 import React from "react";
 
-const DotsLoader = () => {
+const DotsLoader = ({ color }) => {
 	return (
 		<div className="dots-loader spinner">
-			<div className="bounce1"></div>
-			<div className="bounce2"></div>
-			<div className="bounce3"></div>
+			<div className="bounce1" style={{ backgroundColor: color }}></div>
+			<div className="bounce2" style={{ backgroundColor: color }}></div>
+			<div className="bounce3" style={{ backgroundColor: color }}></div>
 		</div>
 	);
 };

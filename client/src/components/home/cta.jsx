@@ -12,7 +12,10 @@ const CTA = () => {
 							<span className="break">control de tus finanzas.</span>
 						</h2>
 						<div data-aos="fade-up">
-							<a href="/" className="button cta cta--violet cta--violet-1">
+							<a
+								href="https://app.exchangecopter.com/signup"
+								className="button cta cta--violet cta--violet-1"
+							>
 								Empezar ahora
 							</a>
 						</div>

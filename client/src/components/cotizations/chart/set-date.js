@@ -22,7 +22,7 @@ const setDate = (state, payload) => {
 	if (timestamp === YEARLY) getChartData(`${year}-01-01`, YEARLY);
 	if (timestamp === MONTHLY) getChartData(`${year}-${month}-01`, MONTHLY);
 	if (timestamp === WEEKLY) getChartData(`${year}-${month}-${week}`, WEEKLY);
-	return { ...state };
+	return { ...state, data: { prices: [], timestamps: [] } };
 };
 
 export default setDate;
