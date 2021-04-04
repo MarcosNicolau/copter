@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const getChartData = require('./get-chart-data');
 const getPriceData = require('./get-price-data');
 require('dotenv').config();
@@ -10,8 +10,9 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser({ extended: true }));
+app.use(helmet());
+app.use(express.json());
+app.use(express({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

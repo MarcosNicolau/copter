@@ -49,13 +49,13 @@ const Footer = () => {
 								support@exchangecopter.com
 							</p>
 							<div className="flex-row-center footer__contact">
-								<a href="">
+								<a href="https://www.facebook.com/copterNews">
 									<img src={facebook} alt="facebook contact" />
 								</a>
-								<a href="">
+								<a href="https://www.instagram.com/copter_news/">
 									<img src={instagram} alt="instagram contact" />
 								</a>
-								<a href="">
+								<a href="https://www.linkedin.com/company/cotperexchange">
 									<img src={linkedin} alt="linkedin contact" />
 								</a>
 							</div>

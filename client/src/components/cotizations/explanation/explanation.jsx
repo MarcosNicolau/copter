@@ -12,10 +12,12 @@ const Explanation = () => {
 	} = useCryptoContext();
 	return (
 		<section>
-			<ContentImg illustration={illustration}>
-				<h2 className="title">Que es {name}?</h2>
-				<p>{explanation}</p>
-			</ContentImg>
+			<div className="space">
+				<ContentImg illustration={illustration}>
+					<h2 className="title">Que es {name}?</h2>
+					<p>{explanation}</p>
+				</ContentImg>
+			</div>
 		</section>
 	);
 };
