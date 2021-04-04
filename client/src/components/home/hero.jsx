@@ -5,11 +5,14 @@ import drawCanvas from "./canvas";
 
 const Hero = () => {
 	const canvasResize = (e) => {
-		drawCanvas(document.querySelector("canvas"), e.target.innerWidth);
+		if (e.target.innerWidth < 900) return;
+		const starsNumber = e.target.innerWidth <= 1000 ? 20 : 200;
+		drawCanvas(document.querySelector("canvas"), starsNumber);
 	};
 
 	const canvasRef = useCallback((canvas) => {
-		drawCanvas(canvas, window.innerWidth);
+		const starsNumber = window.innerWidth <= 1000 ? 20 : 200;
+		drawCanvas(canvas, starsNumber);
 		window.addEventListener("resize", canvasResize);
 		return () => window.removeEventListener("resize", canvasResize);
 	}, []);

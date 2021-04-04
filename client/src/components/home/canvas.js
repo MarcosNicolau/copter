@@ -18,14 +18,13 @@ function Star(ctx, canvas) {
 	this.draw();
 }
 
-const drawCanvas = (canvas, windowWidth) => {
+const drawCanvas = (canvas, starsNum) => {
 	const ctx = canvas.getContext("2d");
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	const number = windowWidth <= 1000 ? 20 : 200;
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.width = canvas.parentElement.clientWidth;
+	canvas.height = canvas.parentElement.clientHeight;
 	const stars = [];
-	for (let i = 0; i <= number; i++) {
+	for (let i = 0; i <= starsNum; i++) {
 		stars.push(new Star(ctx, canvas));
 	}
 };

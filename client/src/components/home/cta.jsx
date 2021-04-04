@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useCallback } from "react";
 import joinUsIllustration from "../../assets/illustrations/home/join-us.svg";
+import drawCanvas from "./canvas";
 const CTA = () => {
+	const canvasResize = (e) => {
+		if (e.target.innerWidth < 900) return;
+		const starsNumber = e.target.innerWidth <= 1000 ? 20 : 50;
+		drawCanvas(document.querySelector(".hero-cta-canvas"), starsNumber);
+	};
+
+	const canvasRef = useCallback((canvas) => {
+		const starsNumber = window.innerWidth <= 1000 ? 20 : 50;
+		drawCanvas(canvas, starsNumber);
+		window.addEventListener("resize", canvasResize);
+		return () => window.removeEventListener("resize", canvasResize);
+	}, []);
+
 	return (
 		<section>
-			<div className="bg-primary-200">
-				<div className="flex-row-center home-cta">
-					<div className="container home-cta__text">
+			<div className="home-cta">
+				<canvas ref={canvasRef} className="hero-cta-canvas"></canvas>
+
+				<div className="container flex-row-between home-cta__container">
+					<div>
 						<h2 className="font-wght-700 text-neutral-1000">
 							Somos tu ruta para que tomes
 							<span className="break">control de tus finanzas.</span>

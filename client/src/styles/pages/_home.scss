@@ -5,7 +5,7 @@
 		position: absolute;
 	}
 	color: var(--clr-neutral-1000);
-	background: linear-gradient(180deg, var(--clr-primary-100) 0%, #746bff 100%);
+	background: linear-gradient(108.69deg, #000444 0%, #6057ff 204.24%);
 	position: relative;
 	overflow: hidden;
 
@@ -68,26 +68,43 @@
 }
 
 .home-cta {
-	padding-top: 2rem;
+	position: relative;
 	overflow: hidden;
-	@include mq("small") {
-		min-height: 100vh;
+	background: linear-gradient(94.01deg, #000776 0%, #4b56ff 132.71%);
+	z-index: 100;
+
+	canvas {
+		position: absolute;
+		z-index: -1;
 	}
 
-	&__text {
-		margin: 0 auto;
+	&__container {
+		max-width: 75%;
+		flex-wrap: nowrap;
+		min-height: 50vh;
+		grid-gap: 5rem;
 		@include mq("small") {
-			margin: auto 0;
+			min-height: 100vh;
+		}
+		@include mq("small-medium") {
+			padding-top: 2rem;
+			align-items: flex-start;
 		}
 	}
 
 	&__img-container {
-		margin-left: auto;
-		margin-top: auto;
+		@include mq("all") {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 100;
+		}
 		img {
-			margin-left: auto;
-			@include mq("medium-large") {
-				margin: auto 0;
+			@include mq("all") {
+				max-height: 10rem;
+			}
+			@include mq("small") {
+				max-height: 10rem;
 			}
 		}
 	}
