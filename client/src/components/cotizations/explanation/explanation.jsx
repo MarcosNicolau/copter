@@ -14,7 +14,7 @@ const Explanation = () => {
 		<section>
 			<div className="space">
 				<ContentImg illustration={illustration}>
-					<h2 className="title">Que es {name}?</h2>
+					<h2 className="title">Qué es {name}?</h2>
 					<p>{explanation}</p>
 				</ContentImg>
 			</div>

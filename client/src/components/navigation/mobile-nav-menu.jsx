@@ -31,7 +31,7 @@ const MobileNavMenu = ({ isNavOpen, setNavState }) => {
 					<CotizationsLinks />
 				</ul>
 			</ul>
-			<AuthBtns />
+			<AuthBtns mobileClass="mobile-nav-menu__auth--register" />
 		</div>
 	);
 };

@@ -17,10 +17,9 @@ const ReserveCotization = () => {
 		currency: "ARS",
 		pairs: [{ currency: "ARS", name: "Pesos" }],
 	};
-	const explanation = `Lorem Ipsum is simply dummy text of the printing and 
-    typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-    text ever since the 1500s, when an unknown printer took a galley of
-     type and scrambled it to make a type specimen book.`;
+	const explanation = `Reserve es una moneda estable y global (stablecoin) sumada a un sistema de pagos digitales 
+	para personas y empresas en países con alta inflación. Reserve permite que personas y empresas en paises con 
+	alta inflacion, protejan su dinero. Ademas, es una criptomoneda que incrementa la rentabilidad del envio de dinero transfronterizo.`;
 
 	return (
 		<Cotization cryptoInfo={cryptoInfo} pricing={pricing} explanation={explanation} chart="" />

@@ -5,11 +5,8 @@ const CTA = () => {
 		<section>
 			<div className="container flex-column-center space text-center about-cta">
 				<div className="about-cta__text">
-					<h2>Miles de personas ya confian y operan con Copter </h2>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-						Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
-					</p>
+					<h2>Miles de personas ya confían y operan con Copter</h2>
+					<p>No te quedes afuera de esta nueva economía digital</p>
 				</div>
 				<a
 					href="https://app.exchangecopter.com/signup"

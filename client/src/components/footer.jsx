@@ -32,13 +32,13 @@ const Footer = () => {
 								<h5>Cotizaciones</h5>
 								<a href="/cotizaciones/bitcoin">Bitcoin</a>
 								<a href="/cotizaciones/ethereum">Ethereum</a>
-								{/* <a href="/cotizaciones/reserve">Reserve</a> */}
+								<a href="/cotizaciones/reserve">Reserve</a>
 								<a href="/cotizaciones/reserverights">Reserve Rights</a>
 							</div>
 							<div className="flex-column footer__links">
 								<h5>Empresa</h5>
 								<a href="/nosotros">Nosotros</a>
-								<a href="/legal/terms">Terminos y condiciones</a>
+								<a href="/legal/terms">Términos y condiciones</a>
 								<a href="/legal/priv">Privacidad</a>
 							</div>
 						</div>

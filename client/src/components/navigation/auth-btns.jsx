@@ -10,7 +10,7 @@ const AuthBtns = () => {
 			<a className={loginColor} href="https://app.exchangecopter.com/login">
 				Acceder
 			</a>
-			<a className={registerColor} href="https://app.exchangecopter.com/signup">
+			<a className={`${registerColor}`} href="https://app.exchangecopter.com/signup">
 				Registrate
 			</a>
 		</div>

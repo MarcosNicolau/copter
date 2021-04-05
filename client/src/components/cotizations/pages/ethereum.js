@@ -17,10 +17,11 @@ const EthereumCotization = () => {
 		currency: "BTC",
 		pairs: [{ currency: "BTC", name: "Bitcoin" }],
 	};
-	const explanation = `Lorem Ipsum is simply dummy text of the printing and 
-    typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-    text ever since the 1500s, when an unknown printer took a galley of
-     type and scrambled it to make a type specimen book.`;
+	const explanation = `La plataforma Ethereum fue creada en 2015 por el programador Vitalik Buterin, 
+	con la perspectiva de crear un instrumento para aplicaciones descentralizadas y colaborativas. Ether (ETH), su criptomoneda nativa, 
+	es un token que puede ser utilizado en transacciones que usen este software. Como bitcoin, ether existe 
+	como parte de un sistema financiero autónomo de pares, libre de intervención gubernamental. 
+	También como bitcoin, el valor de ether se disparó en un corto periodo de tiempo.`;
 
 	return (
 		<Cotization

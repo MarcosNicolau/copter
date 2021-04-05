@@ -10,24 +10,24 @@ const StartOperate = ({ lineColor }) => {
 	return (
 		<section>
 			<div className="space start-operate container">
-				<SectionTitle title="Comenzar a operar nunca fue tan facil">
-					Contrary to popular belief, Lorem Ipsum is not simply random text. Just dummy
-					text.
+				<SectionTitle title="Comenzar a operar nunca fue tan fácil">
+					Tan fácil como 1, 2, 3...
 				</SectionTitle>
+
 				<div className="flex-row-center start-operate__steps">
-					<Step desc="Deposita pesos" icon={budgetIcon} />
+					<Step desc="Depositá pesos" icon={budgetIcon} />
 					<div
 						className={`start-operate__line ${lineBg}`}
 						data-aos="fade-left"
 						data-aos-delay="100"
 					></div>
-					<Step desc="Compra crypto" icon={buyCryptosIcon} delay="100" />
+					<Step desc="Comprá crypto" icon={buyCryptosIcon} delay="100" />
 					<div
 						className={`start-operate__line ${lineBg}`}
 						data-aos="fade-left"
 						data-aos-delay="300"
 					></div>
-					<Step desc="Crece tus ahorros" icon={valuationsIcon} delay="400" />
+					<Step desc="Aumentá tus ahorros" icon={valuationsIcon} delay="400" />
 				</div>
 			</div>
 		</section>

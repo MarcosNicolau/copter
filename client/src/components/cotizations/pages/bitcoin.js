@@ -20,10 +20,9 @@ const BitcoinCotization = () => {
 			{ currency: "USD", name: "Dolares" },
 		],
 	};
-	const explanation = `Lorem Ipsum is simply dummy text of the printing and 
-    typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-    text ever since the 1500s, when an unknown printer took a galley of
-     type and scrambled it to make a type specimen book.`;
+	const explanation = `Bitcoin es una moneda que fue creada en 2009 por una persona desconocida usando el alias Satoshi Nakamoto. 
+	Las transacciones se realizan sin intermediarios. El bitcoin no se puede usar físicamente, es una moneda digital. Y está descentralizada, 
+	lo que significa que no está controlada por ningún banco o gobierno.`;
 
 	return (
 		<Cotization

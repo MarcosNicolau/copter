@@ -16,7 +16,7 @@ const CryptoChart = () => {
 	} = useChartContext();
 
 	const {
-		state: { name, logo },
+		state: { name, logo, color },
 	} = useCryptoContext();
 	//Using a ref and not an state becuase it causes a re-render and the chart bugs
 	const datapoint = useRef();
@@ -31,15 +31,15 @@ const CryptoChart = () => {
 	return (
 		<section>
 			<div className="container flex-column-center">
-				<h4 className="title chart__title">La cotizacion de {name} en un grafico</h4>
+				<h4 className="title chart__title">La cotización de {name} en un gráfico</h4>
 				<div className="chart text-neutral-200">
 					<div className="flex-row align-center chart__legend">
 						<img src={logo} alt="crypto-logo" />
 						<h5>{name}</h5>
 					</div>
 					<div className="flex-column-center">
-						<h5>Valoracion:</h5>
-						{prices.length ? null : <DotsLoader color="var(--clr-primary-100)" />}
+						<h5>Valoración:</h5>
+						{prices.length ? null : <DotsLoader color={color} />}
 						<h4 ref={datapoint}></h4>
 					</div>
 					<div className="flex-row chart__timestamps">

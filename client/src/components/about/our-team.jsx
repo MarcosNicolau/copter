@@ -25,7 +25,7 @@ const OurTeam = () => {
 				<div className="our-team__title">
 					<h2 className="title text-left">Nuestro equipo</h2>
 					<p className="snippet text-left">
-						Contrary to popular belief, Lorem Ipsum is not simply random text.
+						Formado por jóvenes emprendedores amantes de las criptomonedas
 					</p>
 				</div>
 				<div className="flex-row-center text-neutral-0 our-team__members">

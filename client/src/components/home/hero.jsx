@@ -10,7 +10,7 @@ const Hero = () => {
 					<div className="container flex-row-between hero__container">
 						<div className="hero__title">
 							<h1 data-aos="fade-up" data-aos-delay="300">
-								Sumate a la revolucion{" "}
+								Súmate a la revolución
 								<span className="break">de las cryptos con</span>
 								<img src={fullLogoLight} alt="copter" className="hero__logo" />
 							</h1>
@@ -19,7 +19,7 @@ const Hero = () => {
 								data-aos-delay="400"
 								className="hero__snippet text-secondary-300 font-wght-700"
 							>
-								Compra y vende cryptos desde un exchange legal y seguro
+								Comprá y vendé cryptos desde un exchange legal y seguro
 							</p>
 							<div data-aos="fade-up" data-aos-delay="500">
 								<a

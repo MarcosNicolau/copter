@@ -8,8 +8,8 @@ const CTA = () => {
 				<div className="container flex-row-between home-cta__container">
 					<div>
 						<h2 className="font-wght-700 text-neutral-1000">
-							Somos tu ruta para que tomes
-							<span className="break">control de tus finanzas.</span>
+							Sumate a Copter y
+							<span className="break">toma control de tus finanzas.</span>
 						</h2>
 						<div data-aos="fade-up">
 							<a

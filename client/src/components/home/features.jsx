@@ -11,30 +11,29 @@ const Features = () => {
 	return (
 		<section>
 			<div className="view-100 container features">
-				<SectionTitle title="Todo lo que necesitas para comenzar">
-					Contrary to popular belief, Lorem Ipsum is not simply random text. Just dummy
-					text.
+				<SectionTitle title="Todo lo que necesitas para el universo cripto">
+					No te quedes afuera
 				</SectionTitle>
 				<div className="flex-row-between features__cards-container">
 					<div className="flex-column-center features__cards">
-						<Card title="Total control" icon={controlIcon} type="card-1">
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It
-							has roots in a piece of classical Latin literature.
+						<Card title="Ganale a la inflación" icon={controlIcon} type="card-1">
+							Mantené tus ahorros dolarizados de manera segura con USDC, la moneda
+							estable con el valor del dólar.
 						</Card>
-						<Card title="Evaluacion" icon={evaluationIcon} type="card-1">
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It
-							has roots in a piece of classical Latin literature.
+						<Card title="Invertí" icon={evaluationIcon} type="card-1">
+							Inverti en la nueva generación de activos digitales y hace crecer tu
+							dinero.
 						</Card>
 						<Card title="Proteccion" icon={protectionIcon} type="card-1">
 							Contrary to popular belief, Lorem Ipsum is not simply random text. It
 							has roots in a piece of classical Latin literature.
 						</Card>
-						<Card title="Disponible 24/7" icon={calendarIcon} type="card-1">
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It
-							has roots in a piece of classical Latin literature.
+						<Card title="Comunicáte con nosotros" icon={calendarIcon} type="card-1">
+							Por cualquier consulta no dudes en preguntarnos a través de nuestras
+							redes sociales o nuestro soporte técnico.
 						</Card>
 					</div>
-					<div className="features__illustration " data-aos="fade-left">
+					<div className="features__illustration" data-aos="fade-left">
 						<img src={featureIllustration} alt="features" />
 					</div>
 				</div>

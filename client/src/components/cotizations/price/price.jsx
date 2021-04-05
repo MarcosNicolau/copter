@@ -32,7 +32,7 @@ const Price = () => {
 					<img src={initialLogo} alt="crypto" className="price__crypto-logo" />
 					<div className="flex-column-center">
 						<div className="price__title">
-							<h2>Cotizacion {name}</h2>
+							<h2>Cotización {name}</h2>
 							<h5>El valor de {name} en tiempo real</h5>
 						</div>
 						<div className="flex-row-center price__prices">
@@ -51,7 +51,7 @@ const Price = () => {
 								</h1>
 							</div>
 							<div>
-								<h5>Valoracion</h5>
+								<h5>Valoración</h5>
 								<div className="flex-row-center">
 									<h1 className={color}>{rate ? rate : <DotsLoader />}</h1>
 									{arrow && <img src={arrow} alt="valoration" />}

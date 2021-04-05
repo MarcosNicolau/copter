@@ -67,9 +67,6 @@ p {
 	font-weight: 600;
 	color: var(--clr-secondary-300);
 	text-align: center;
-	@include mq("medium") {
-		font-size: var(--fs-450);
-	}
 }
 
 .text-left {
