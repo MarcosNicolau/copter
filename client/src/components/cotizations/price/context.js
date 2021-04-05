@@ -16,7 +16,7 @@ const PriceContextProvider = ({ children }) => {
 	const getPriceData = async () => {
 		const endpoint = `/get-price-data`;
 		try {
-			const res = await axios.post(endpoint, { cryptoPair: `${abbr}${state.currency}` });
+			const res = await axios.post(endpoint, { cryptoPair: `${abbr}${state.currency.abbr}` });
 			const data = res.data;
 			dispatch({
 				type: priceActions.SET_PRICE,
@@ -32,7 +32,7 @@ const PriceContextProvider = ({ children }) => {
 
 	//Gets the pricing everytime the currency changes and sets an interval.
 	useEffect(() => {
-		if (!abbr || !state.currency) return;
+		if (!abbr || !state.currency.abbr) return;
 		getPriceData();
 		if (window.priceInterval) window.clearInterval(window.priceInterval);
 		window.priceInterval = window.setInterval(getPriceData, [10000]);

@@ -13,11 +13,11 @@ const CotizationsLinks = () => {
 					Ethereum
 				</a>
 			</li>
-			<li>
+			{/* <li>
 				<a className="nav__links" href="/cotizaciones/reserve">
 					Reserve
 				</a>
-			</li>
+			</li> */}
 			<li>
 				<a className="nav__links" href="/cotizaciones/reserverights">
 					Reserve Rights

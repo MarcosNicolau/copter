@@ -2,7 +2,6 @@ import React from "react";
 import { usePriceContext } from "./context";
 import { useCryptoContext } from "../context";
 import DotsLoader from "../../shared/components/loaders/dots-loader";
-import bitcoinInitial from "../../../assets/cryptos/initial/bitcoin.svg";
 
 const Price = () => {
 	const {
@@ -20,7 +19,10 @@ const Price = () => {
 		priceActions,
 	} = usePriceContext();
 	const updateCurrency = (e) =>
-		dispatch({ type: priceActions.SET_CURRENCY, payload: e.target.value });
+		dispatch({
+			type: priceActions.SET_CURRENCY,
+			payload: e.target.value,
+		});
 
 	return (
 		<section>
@@ -37,22 +39,14 @@ const Price = () => {
 							<div>
 								<h5>Compra</h5>
 								<h1>
-									{currency === "BTC" ? (
-										<img src={bitcoinInitial} alt="BTC" />
-									) : (
-										"$"
-									)}
+									{currency.symbol}
 									{ask ? ask : <DotsLoader />}
 								</h1>
 							</div>
 							<div>
 								<h5>Venta</h5>
 								<h1>
-									{currency === "BTC" ? (
-										<img src={bitcoinInitial} alt="BTC" />
-									) : (
-										"$"
-									)}
+									{currency.symbol}
 									{bid ? bid : <DotsLoader />}
 								</h1>
 							</div>

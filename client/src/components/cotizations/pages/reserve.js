@@ -15,10 +15,7 @@ const ReserveCotization = () => {
 	};
 	const pricing = {
 		currency: "ARS",
-		pairs: [
-			{ currency: "ARS", name: "Pesos" },
-			{ currency: "BTC", name: "Bitcoin" },
-		],
+		pairs: [{ currency: "ARS", name: "Pesos" }],
 	};
 	const explanation = `Lorem Ipsum is simply dummy text of the printing and 
     typesetting industry. Lorem Ipsum has been the industry's standard dummy 

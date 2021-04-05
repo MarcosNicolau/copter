@@ -1,3 +1,5 @@
+import comet from "../../assets/miscellaneous/canvas/comet.svg";
+
 function Star(ctx, canvas) {
 	const x = Math.random() * canvas.offsetWidth;
 	let y = Math.random() * canvas.offsetHeight;
@@ -14,16 +16,64 @@ function Star(ctx, canvas) {
 
 	this.move = (newPos) => {
 		y += newPos;
-		ctx.fillStyle = "white";
-		ctx.beginPath();
-		ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
-		ctx.fill();
-		ctx.shadowColor = "white";
-		ctx.shadowBlur = shadowblur;
+		this.draw();
 	};
 
 	this.draw();
 }
+
+function Comet(ctx) {
+	const img = new Image();
+	img.src = comet;
+	this.x = Math.random() * (window.innerWidth - 0) + 0;
+	this.y = Math.random() * 20;
+
+	this.draw = () => {
+		img.onload = () => {
+			ctx.drawImage(img, this.x, this.y);
+		};
+	};
+
+	this.move = (newPosX, newPosY) => {
+		this.x -= newPosX;
+		this.y += newPosY;
+		ctx.drawImage(img, this.x, this.y);
+	};
+
+	this.draw();
+}
+
+const cometAnimation = (ctx, canvas, comets, stars) => {
+	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
+
+	//The lower  the less chances of appearing
+	const spawnChances = 0.009;
+	Math.random() < spawnChances ? comets.push(new Comet(ctx, canvas)) : "";
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	stars.forEach((star) => {
+		star.draw();
+	});
+	comets.forEach((comet, index) => {
+		//Remove the comet if is out of the screen
+		if (comet.x < -100) return comets.splice(index, 1);
+		comet.move(10, 10);
+	});
+};
+
+const starsAnimation = (ctx, canvas, stars) => {
+	const moveSpeed = 1.5;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	//Checks if the user has scroll down or up, and sets its respective moveSpeed
+	const newPos = initialScrollTop >= window.scrollY ? moveSpeed : -moveSpeed;
+	initialScrollTop = window.scrollY;
+
+	stars.forEach((star) => star.move(newPos));
+
+	if (stars.length > 300) return;
+	stars.push(new Star(ctx, canvas));
+};
 
 //This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
 let initialScrollTop = 0;
@@ -33,25 +83,21 @@ const drawCanvas = (canvas) => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	canvas.width = canvas.parentElement.clientWidth;
 	canvas.height = canvas.parentElement.clientHeight;
+
 	const starsNumber = window.innerWidth <= 1000 ? 100 : 200;
 	const stars = [];
+	const comets = [];
+
+	//Create instances of stars based on starsNumber
 	for (let i = 0; i <= starsNumber; i++) {
 		stars.push(new Star(ctx, canvas));
 	}
 
-	const animate = () => {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		const newPos = initialScrollTop >= window.scrollY ? 1.5 : -1.5;
-		initialScrollTop = window.scrollY;
-		stars.forEach((star) => {
-			star.move(newPos);
-		});
-		if (stars.length > 500) return;
-		stars.push(new Star(ctx, canvas));
-	};
+	cometAnimation(ctx, canvas, comets, stars);
 
+	//Add stars animation on scroll on screens larger than 1000px
 	if (window.innerWidth <= 1000) return;
-	window.addEventListener("scroll", animate);
+	window.addEventListener("scroll", () => starsAnimation(ctx, canvas, stars));
 };
 
 export default drawCanvas;
