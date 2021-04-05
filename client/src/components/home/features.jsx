@@ -3,7 +3,7 @@ import featureIllustration from "../../assets/illustrations/home/features.svg";
 import controlIcon from "../../assets/icons/home/features/control.svg";
 import evaluationIcon from "../../assets/icons/home/features/evaluation.svg";
 import protectionIcon from "../../assets/icons/home/features/protection.svg";
-import calendarIcon from "../../assets/icons/home/features/calendar.svg";
+import supportIcon from "../../assets/icons/home/features/support.svg";
 import Card from "../shared/components/card.jsx";
 import SectionTitle from "../shared/components/section-title.jsx";
 
@@ -25,10 +25,9 @@ const Features = () => {
 							dinero.
 						</Card>
 						<Card title="Proteccion" icon={protectionIcon} type="card-1">
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It
-							has roots in a piece of classical Latin literature.
+							Copter es el mejor lugar para comprar Bitcoin de manera rápida y segura.
 						</Card>
-						<Card title="Comunicáte con nosotros" icon={calendarIcon} type="card-1">
+						<Card title="Comunicáte con nosotros" icon={supportIcon} type="card-1">
 							Por cualquier consulta no dudes en preguntarnos a través de nuestras
 							redes sociales o nuestro soporte técnico.
 						</Card>
