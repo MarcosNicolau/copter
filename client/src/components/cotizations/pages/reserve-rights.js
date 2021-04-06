@@ -1,6 +1,5 @@
 import React from "react";
 import initial from "../../../assets/cryptos/initial/rsr.svg";
-import logo from "../../../assets/cryptos/full/rsr.svg";
 import illustration from "../../../assets/illustrations/cotization/rsr.svg";
 import Cotization from "../cotization";
 
@@ -9,7 +8,6 @@ const ReserveCotization = () => {
 		name: "Reserve Rights",
 		abbr: "RSR",
 		initialLogo: initial,
-		logo: logo,
 		illustration: illustration,
 		color: "#000",
 	};

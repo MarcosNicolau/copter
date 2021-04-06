@@ -1,6 +1,5 @@
 import React from "react";
 import initial from "../../../assets/cryptos/initial/usdc.svg";
-import logo from "../../../assets/cryptos/full/usdc.svg";
 import illustration from "../../../assets/illustrations/cotization/usdc.svg";
 import Cotization from "../cotization";
 
@@ -9,7 +8,6 @@ const USDCCotization = () => {
 		name: "USDC",
 		abbr: "USDC",
 		initialLogo: initial,
-		logo: logo,
 		illustration: illustration,
 		color: "#2675c9",
 	};
