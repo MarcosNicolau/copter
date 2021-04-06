@@ -8,6 +8,7 @@ const getChartData = async (req, res) => {
     const timestamps = parsedData[0].timestamps.map((timestamp) =>
         new Date(timestamp).toDateString()
     );
+    if (!parsedData) return res.status(503).send('Could not get the data');
     res.send({ prices: parsedData[0].prices, timestamps });
 };
 

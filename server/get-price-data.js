@@ -7,10 +7,10 @@ const getPriceData = async (req, res) => {
         const response = await fetch(endpoint);
         const data = await response.json();
         const pair = data.find((crypto) => crypto.pair === cryptoPair);
-        if (!pair) return res.status(404).send('Coin not found');
+        if (!pair) return res.status(503).send('Coin not found');
         res.send(pair);
     } catch (err) {
-        res.status(503);
+        res.status(503).send('Couldn not get the data');
     }
 };
 

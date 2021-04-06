@@ -10,8 +10,6 @@ function Star(ctx, canvas) {
 		ctx.beginPath();
 		ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
 		ctx.fill();
-		ctx.shadowColor = "white";
-		ctx.shadowBlur = shadowblur;
 	};
 
 	this.move = (newPos) => {
@@ -25,7 +23,7 @@ function Star(ctx, canvas) {
 function Comet(ctx) {
 	const img = new Image();
 	img.src = comet;
-	this.x = Math.random() * (window.innerWidth - 0) + 0;
+	this.x = Math.random() * window.innerWidth;
 	this.y = Math.random() * 20;
 
 	this.draw = () => {
@@ -44,8 +42,6 @@ function Comet(ctx) {
 }
 
 const cometAnimation = (ctx, canvas, comets, stars) => {
-	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
-
 	//The lower  the less chances of appearing
 	const spawnChances = 0.015;
 	Math.random() < spawnChances && comets.push(new Comet(ctx, canvas));
@@ -59,20 +55,21 @@ const cometAnimation = (ctx, canvas, comets, stars) => {
 		if (comet.x < -100) return setTimeout(() => comets.splice(index, 1), 0);
 		comet.move(10, 10);
 	});
+	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 };
 
-//This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
-let initialScrollTop = 0;
-const starsAnimation = (ctx, canvas, stars) => {
-	const moveSpeed = 1.5;
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+// //This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
+// let initialScrollTop = 0;
+// const starsAnimation = (ctx, canvas, stars) => {
+// 	const moveSpeed = 1.5;
+// 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-	//Checks if the user has scroll down or up, and sets its respective moveSpeed
-	const newPos = initialScrollTop >= window.scrollY ? moveSpeed : -moveSpeed;
-	initialScrollTop = window.scrollY;
+// 	//Checks if the user has scroll down or up, and sets its respective moveSpeed
+// 	const newPos = initialScrollTop >= window.scrollY ? moveSpeed : -moveSpeed;
+// 	initialScrollTop = window.scrollY;
 
-	stars.forEach((star) => star.move(newPos));
-};
+// 	stars.forEach((star) => star.move(newPos));
+// };
 
 const drawCanvas = (canvas) => {
 	const ctx = canvas.getContext("2d");
@@ -90,11 +87,12 @@ const drawCanvas = (canvas) => {
 	}
 
 	//Play comets animation only on screens larger than 1000 px
-	if (window.innerWidth >= 1000) cometAnimation(ctx, canvas, comets, stars);
+	if (window.innerWidth >= 1000)
+		requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 
-	//Add stars animation on scroll on screens larger than 1000px
-	if (window.innerWidth <= 1000) return;
-	window.addEventListener("scroll", () => starsAnimation(ctx, canvas, stars));
+	// //Add stars animation on scroll on screens larger than 1000px
+	// if (window.innerWidth <= 1000) return;
+	// window.addEventListener("scroll", () => starsAnimation(ctx, canvas, stars));
 };
 
 export default drawCanvas;
