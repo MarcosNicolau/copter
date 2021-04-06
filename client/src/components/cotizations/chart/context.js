@@ -24,6 +24,7 @@ const ChartContextProvider = ({ children }) => {
 					prices: res.data.prices,
 					timestamps: res.data.timestamps,
 					activeDate: range,
+					error: null,
 				},
 			});
 		} catch (err) {

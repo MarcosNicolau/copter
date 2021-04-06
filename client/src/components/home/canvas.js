@@ -47,8 +47,8 @@ const cometAnimation = (ctx, canvas, comets, stars) => {
 	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 
 	//The lower  the less chances of appearing
-	const spawnChances = 0.009;
-	Math.random() < spawnChances ? comets.push(new Comet(ctx, canvas)) : "";
+	const spawnChances = 0.015;
+	Math.random() < spawnChances && comets.push(new Comet(ctx, canvas));
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	stars.forEach((star) => {
@@ -56,11 +56,13 @@ const cometAnimation = (ctx, canvas, comets, stars) => {
 	});
 	comets.forEach((comet, index) => {
 		//Remove the comet if is out of the screen
-		if (comet.x < -100) return comets.splice(index, 1);
+		if (comet.x < -100) return setTimeout(() => comets.splice(index, 1), 0);
 		comet.move(10, 10);
 	});
 };
 
+//This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
+let initialScrollTop = 0;
 const starsAnimation = (ctx, canvas, stars) => {
 	const moveSpeed = 1.5;
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -70,13 +72,7 @@ const starsAnimation = (ctx, canvas, stars) => {
 	initialScrollTop = window.scrollY;
 
 	stars.forEach((star) => star.move(newPos));
-
-	if (stars.length > 300) return;
-	stars.push(new Star(ctx, canvas));
 };
-
-//This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
-let initialScrollTop = 0;
 
 const drawCanvas = (canvas) => {
 	const ctx = canvas.getContext("2d");
@@ -84,7 +80,7 @@ const drawCanvas = (canvas) => {
 	canvas.width = canvas.parentElement.clientWidth;
 	canvas.height = canvas.parentElement.clientHeight;
 
-	const starsNumber = window.innerWidth <= 1000 ? 100 : 200;
+	const starsNumber = window.innerWidth <= 1000 ? 100 : 300;
 	const stars = [];
 	const comets = [];
 
@@ -93,7 +89,8 @@ const drawCanvas = (canvas) => {
 		stars.push(new Star(ctx, canvas));
 	}
 
-	cometAnimation(ctx, canvas, comets, stars);
+	//Play comets animation only on screens larger than 1000 px
+	if (window.innerWidth >= 1000) cometAnimation(ctx, canvas, comets, stars);
 
 	//Add stars animation on scroll on screens larger than 1000px
 	if (window.innerWidth <= 1000) return;

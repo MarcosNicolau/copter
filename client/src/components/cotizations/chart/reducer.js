@@ -29,9 +29,9 @@ const chartReducer = (state, action) => {
 				data: {
 					prices: payload.prices,
 					timestamps: payload.timestamps,
-					error: payload.error,
 				},
 				activeDate: payload.activeDate,
+				error: payload.error,
 			};
 		case chartActions.SET_DATE:
 			return setDate(state, payload);

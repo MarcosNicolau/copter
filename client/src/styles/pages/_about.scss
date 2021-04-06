@@ -29,12 +29,20 @@
 	}
 
 	&__members {
-		grid-gap: 5rem;
+		display: grid;
+		grid-template-columns: repeat(4, 14rem);
+		justify-content: center;
+		align-content: center;
+		grid-column-gap: 3rem;
+		@include mq("all") {
+			grid-template-columns: repeat(2, 14rem);
+			grid-row-gap: 1rem;
+		}
+		@include mq("small") {
+			grid-template-columns: repeat(1, 14rem);
+		}
 		p {
 			font-size: 1rem;
-		}
-		@include mq("all") {
-			grid-gap: 2.5rem;
 		}
 	}
 	&__member {
@@ -52,7 +60,7 @@
 		}
 		p {
 			margin-top: 0.2rem;
-			width: 70%;
+			width: 55%;
 			text-align: center;
 		}
 	}

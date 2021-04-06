@@ -11,6 +11,7 @@ const setPrice = (state, payload) => {
 			bid: payload.bid,
 		},
 		valoration,
+		error: null,
 	};
 };
 

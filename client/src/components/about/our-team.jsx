@@ -28,7 +28,7 @@ const OurTeam = () => {
 						Formado por jóvenes emprendedores amantes de las criptomonedas
 					</p>
 				</div>
-				<div className="flex-row-center text-neutral-0 our-team__members">
+				<div className="text-neutral-0 our-team__members">
 					<TeamMember
 						photo={hernan}
 						name="Hernan Cantarin"
