@@ -59,18 +59,18 @@ const cometAnimation = (ctx, canvas, comets, stars) => {
 	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 };
 
-// //This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
-// let initialScrollTop = 0;
-// const starsAnimation = (ctx, canvas, stars) => {
-// 	const moveSpeed = 1.5;
-// 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+//This variable is for checking whether the user has scrolled down or up, by substracting it from the current scroll
+let initialScrollTop = 0;
+const starsAnimation = (ctx, canvas, stars) => {
+	const moveSpeed = 1.5;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-// 	//Checks if the user has scroll down or up, and sets its respective moveSpeed
-// 	const newPos = initialScrollTop >= window.scrollY ? moveSpeed : -moveSpeed;
-// 	initialScrollTop = window.scrollY;
+	//Checks if the user has scroll down or up, and sets its respective moveSpeed
+	const newPos = initialScrollTop >= window.scrollY ? moveSpeed : -moveSpeed;
+	initialScrollTop = window.scrollY;
 
-// 	stars.forEach((star) => star.move(newPos));
-// };
+	stars.forEach((star) => star.move(newPos));
+};
 
 const drawCanvas = (canvas) => {
 	const ctx = canvas.getContext("2d");
@@ -91,9 +91,9 @@ const drawCanvas = (canvas) => {
 	if (window.innerWidth >= 1000)
 		requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 
-	// //Add stars animation on scroll on screens larger than 1000px
-	// if (window.innerWidth <= 1000) return;
-	// window.addEventListener("scroll", () => starsAnimation(ctx, canvas, stars));
+	//Add stars animation on scroll on screens larger than 1000px
+	if (window.innerWidth <= 1000) return;
+	window.addEventListener("scroll", () => starsAnimation(ctx, canvas, stars));
 };
 
 export default drawCanvas;
