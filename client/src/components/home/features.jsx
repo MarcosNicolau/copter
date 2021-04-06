@@ -2,7 +2,7 @@ import React from "react";
 import featureIllustration from "../../assets/illustrations/home/features.svg";
 import controlIcon from "../../assets/icons/home/features/control.svg";
 import evaluationIcon from "../../assets/icons/home/features/evaluation.svg";
-import protectionIcon from "../../assets/icons/home/features/protection.svg";
+import informedIcon from "../../assets/icons/home/features/informed.svg";
 import supportIcon from "../../assets/icons/home/features/support.svg";
 import Card from "../shared/components/card.jsx";
 import SectionTitle from "../shared/components/section-title.jsx";
@@ -24,8 +24,10 @@ const Features = () => {
 							Inverti en la nueva generación de activos digitales y hace crecer tu
 							dinero.
 						</Card>
-						<Card title="Proteccion" icon={protectionIcon} type="card-1">
-							Copter es el mejor lugar para comprar Bitcoin de manera rápida y segura.
+						<Card title="Mantenete informado" icon={informedIcon} type="card-1">
+							En el mundo de las criptomonedas es muy importante mantenerse
+							actualizado y estar al tanto de todo lo que sucede; por eso seguinos en
+							nuestras redes sociales y no te pierdas de nada.
 						</Card>
 						<Card title="Comunicáte con nosotros" icon={supportIcon} type="card-1">
 							Por cualquier consulta no dudes en preguntarnos a través de nuestras

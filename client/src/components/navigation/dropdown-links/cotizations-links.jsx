@@ -14,6 +14,11 @@ const CotizationsLinks = () => {
 				</a>
 			</li>
 			<li>
+				<a className="nav__links" href="/cotizaciones/usdc">
+					USDC
+				</a>
+			</li>
+			<li>
 				<a className="nav__links" href="/cotizaciones/reserve">
 					Reserve
 				</a>

@@ -3,7 +3,7 @@ import React from "react";
 const Error = () => {
 	return (
 		<h5 className="text-warning-negative">
-			Hubo un error al obtener la informacion, por favor refresque la ventana
+			Hubo un error al obtener la información, por favor refresque la ventana.
 		</h5>
 	);
 };

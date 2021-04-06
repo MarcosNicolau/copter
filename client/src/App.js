@@ -14,11 +14,14 @@ import Footer from "./components/footer.jsx";
 
 //Pages
 const Home = lazy(() => import("./components/home"));
+const About = lazy(() => import("./components/about"));
+
+//Cotization pages
 const BitcoinCotization = lazy(() => import("./components/cotizations/pages/bitcoin"));
 const EthereumCotization = lazy(() => import("./components/cotizations/pages/ethereum"));
 const ReserveCotization = lazy(() => import("./components/cotizations/pages/reserve"));
 const ReserveRightsCotization = lazy(() => import("./components/cotizations/pages/reserve-rights"));
-const About = lazy(() => import("./components/about"));
+const USDCCotization = lazy(() => import("./components/cotizations/pages/usdc"));
 
 //Legal
 const Terms = lazy(() => import("./components/legal/terms"));
@@ -57,6 +60,7 @@ const App = () => {
 								path="/cotizaciones/reserverights"
 								component={ReserveRightsCotization}
 							/>
+							<Route path="/cotizaciones/usdc" component={USDCCotization} />
 						</CryptoContextProvider>
 					</Switch>
 				</NavContextProvider>

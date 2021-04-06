@@ -3,7 +3,7 @@ import comet from "../../assets/miscellaneous/canvas/comet.svg";
 function Star(ctx, canvas) {
 	const x = Math.random() * canvas.offsetWidth;
 	let y = Math.random() * canvas.offsetHeight;
-	let shadowblur = Math.floor(Math.random() * 10) + 1;
+	// let shadowblur = Math.floor(Math.random() * 10) + 1;
 
 	this.draw = () => {
 		ctx.fillStyle = "white";
@@ -51,7 +51,8 @@ const cometAnimation = (ctx, canvas, comets, stars) => {
 		star.draw();
 	});
 	comets.forEach((comet, index) => {
-		//Remove the comet if is out of the screen
+		//Removes the comet if its out of the screen.
+		//The reason for the set timeout is to prevent the other elemnts from flashing.
 		if (comet.x < -100) return setTimeout(() => comets.splice(index, 1), 0);
 		comet.move(10, 10);
 	});
