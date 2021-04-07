@@ -2,7 +2,7 @@ import React from "react";
 import linkedinIcon from "../../assets/company/contact/linkedin-2.svg";
 import hernan from "../../assets/company/team/hernan.jpg";
 import ignacio from "../../assets/company/team/ignacio.jpg";
-import stefania from "../../assets/company/team/stefania.svg";
+import abril from "../../assets/company/team/abril.jpg";
 import leandro from "../../assets/company/team/leandro.jpg";
 import marcos from "../../assets/company/team/marcos.jpg";
 
@@ -43,10 +43,10 @@ const OurTeam = () => {
 						linkedin="https://www.linkedin.com/in/ignacio-manzanel-b509661a9/"
 					/>
 					<TeamMember
-						photo={stefania}
-						name="Stefania Wetzel"
-						position="Community Manager"
-						linkedin="/"
+						photo={abril}
+						name="Abril Garcia"
+						position={`Community Manager && UX`}
+						linkedin="https://www.linkedin.com/in/abril-garcia-54584a1b7/"
 					/>
 					<TeamMember
 						photo={leandro}

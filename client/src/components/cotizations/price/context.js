@@ -18,6 +18,7 @@ const PriceContextProvider = ({ children }) => {
 		try {
 			const res = await axios.post(endpoint, { cryptoPair: `${abbr}${state.currency.abbr}` });
 			const data = res.data;
+			if (!data) return;
 			dispatch({
 				type: priceActions.SET_PRICE,
 				payload: { ask: data.ask, bid: data.bid, priceChange: data.price_24h_change },

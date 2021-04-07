@@ -88,8 +88,7 @@ const drawCanvas = (canvas) => {
 	}
 
 	//Play comets animation only on screens larger than 1000 px
-	if (window.innerWidth >= 1000)
-		requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
+	requestAnimationFrame(() => cometAnimation(ctx, canvas, comets, stars));
 
 	//Add stars animation on scroll on screens larger than 1000px
 	if (window.innerWidth <= 1000) return;
