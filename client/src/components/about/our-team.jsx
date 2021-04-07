@@ -4,6 +4,7 @@ import hernan from "../../assets/company/team/hernan.svg";
 import ignacio from "../../assets/company/team/ignacio.svg";
 import stefania from "../../assets/company/team/stefania.svg";
 import leandro from "../../assets/company/team/leandro.svg";
+import marcos from "../../assets/company/team/marcos.JPG";
 
 const TeamMember = ({ photo, name, position, linkedin }) => {
 	return (
@@ -52,6 +53,12 @@ const OurTeam = () => {
 						name="Leandro.A. Duran"
 						position="Marketing Advisor"
 						linkedin="https://www.linkedin.com/in/leandro-alvarez-duran-a70b90131/"
+					/>
+					<TeamMember
+						photo={marcos}
+						name="Marcos Nicolau"
+						position="Software Developer"
+						linkedin="https://www.linkedin.com/in/marcos-nicolau-0ba38a178/"
 					/>
 				</div>
 			</div>

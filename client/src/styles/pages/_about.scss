@@ -54,6 +54,7 @@
 		&__profile {
 			padding: 0.5rem;
 			@include border($position: false);
+			height: 12rem;
 			border-radius: 50%;
 			max-height: 15rem;
 			max-width: 15rem;
@@ -88,6 +89,7 @@
 		height: 22rem;
 		width: 22rem;
 		font-family: "Noto Sans JP";
+		font-display: swap;
 
 		@include mq("large") {
 			margin: 0 1.5rem 2rem;
