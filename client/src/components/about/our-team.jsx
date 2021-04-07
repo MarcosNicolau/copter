@@ -1,10 +1,10 @@
 import React from "react";
 import linkedinIcon from "../../assets/company/contact/linkedin-2.svg";
-import hernan from "../../assets/company/team/hernan.svg";
-import ignacio from "../../assets/company/team/ignacio.svg";
+import hernan from "../../assets/company/team/hernan.jpg";
+import ignacio from "../../assets/company/team/ignacio.jpg";
 import stefania from "../../assets/company/team/stefania.svg";
-import leandro from "../../assets/company/team/leandro.svg";
-import marcos from "../../assets/company/team/marcos.JPG";
+import leandro from "../../assets/company/team/leandro.jpg";
+import marcos from "../../assets/company/team/marcos.jpg";
 
 const TeamMember = ({ photo, name, position, linkedin }) => {
 	return (
