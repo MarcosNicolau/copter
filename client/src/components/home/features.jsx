@@ -26,8 +26,7 @@ const Features = () => {
 						</Card>
 						<Card title="Mantenete informado" icon={informedIcon} type="card-1">
 							En el mundo de las criptomonedas es muy importante mantenerse
-							actualizado y estar al tanto de todo lo que sucede; por eso seguinos en
-							nuestras redes sociales y no te pierdas de nada.
+							actualizado y estar al tanto de todo lo que sucede.
 						</Card>
 						<Card title="Comunicáte con nosotros" icon={supportIcon} type="card-1">
 							Por cualquier consulta no dudes en preguntarnos a través de nuestras
