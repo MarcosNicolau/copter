@@ -19,7 +19,7 @@ const MobileNav = () => {
 		<div className="mobile-nav-container container">
 			<div className="flex-row-between mobile-nav">
 				<a href="/">
-					<img src={fullLogo} alt="logo" className="mobile-nav__logo" />
+					<img src={fullLogo} alt="copter" className="mobile-nav__logo" />
 				</a>
 				<img src={hamburguer} alt="open nav" onClick={setNavState} />
 			</div>

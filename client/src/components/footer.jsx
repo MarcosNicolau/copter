@@ -11,7 +11,7 @@ const Footer = () => {
 				<div className="container text-neutral-1000 flex-column footer">
 					<div className="flex-row-between footer__top">
 						<div className="flex-column-center">
-							<img src={fullLogoLight} alt="copter logo" className="footer__logo" />
+							<img src={fullLogoLight} alt="copter" className="footer__logo" />
 							<div className="flex-column footer__auth-btns">
 								<a
 									href="https://app.exchangecopter.com/signup"

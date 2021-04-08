@@ -12,7 +12,7 @@ const MobileNavMenu = ({ isNavOpen, setNavState }) => {
 			}`}
 		>
 			<div className="flex-row-between container mobile-nav-menu__top">
-				<img src={logoLight} alt="logo" className="nav__logo" />
+				<img src={logoLight} alt="copter" className="nav__logo" />
 				<img src={close} alt="close" onClick={setNavState} className="padding-100" />
 			</div>
 			<ul className="mobile-nav-menu__links-container">

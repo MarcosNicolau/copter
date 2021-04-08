@@ -15,7 +15,7 @@ const Nav = () => {
 				<ul className="flex-row-center">
 					<li>
 						<a className="nav__link" href="/">
-							<img src={logo} alt="logo" className="nav__logo" />
+							<img src={logo} alt="copter" className="nav__logo" />
 						</a>
 					</li>
 					<li>
