@@ -44,7 +44,7 @@ const OurTeam = () => {
 					/>
 					<TeamMember
 						photo={abril}
-						name="Abril Garcia"
+						name="Abril García"
 						position={`Community Manager && UX`}
 						linkedin="https://www.linkedin.com/in/abril-garcia-54584a1b7/"
 					/>
