@@ -30,7 +30,7 @@ const Nav = () => {
 					</li>
 					<li>
 						<a href="/legal/limites-comiciones" className={`nav__links ${linkspseudo}`}>
-							Limites y comisiones
+							Límites y comisiones
 						</a>
 					</li>
 				</ul>
