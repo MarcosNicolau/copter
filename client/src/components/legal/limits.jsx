@@ -3,7 +3,7 @@ import React from "react";
 const Limits = () => {
 	return (
 		<div className="legal__list">
-			<h3>Limites: </h3>
+			<h3>Límites: </h3>
 			<div>
 				<ul>
 					<h4>Si usted es nivel Pro Trader los límites son:</h4>

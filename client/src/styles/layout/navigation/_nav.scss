@@ -35,12 +35,12 @@
 			height: 0.1rem;
 			width: 0%;
 			background-color: var(--clr-primary-100);
-			@include transition;
+			@include transition($duration: 350ms);
 		}
 
 		&:hover::after {
 			width: 100%;
-			@include transition;
+			@include transition($duration: 350ms);
 		}
 	}
 

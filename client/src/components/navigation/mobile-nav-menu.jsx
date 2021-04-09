@@ -26,6 +26,11 @@ const MobileNavMenu = ({ isNavOpen, setNavState }) => {
 						<h5>Nosotros</h5>
 					</a>
 				</li>
+				<li>
+					<a href="/legal/limites-comiciones" className="mobile-nav-menu__links">
+						<h5>Limites y comiciones</h5>
+					</a>
+				</li>
 				<ul className="mobile-nav-menu__dropdown-links">
 					<h5>Cotizaciones: </h5>
 					<CotizationsLinks />

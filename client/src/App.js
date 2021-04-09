@@ -26,6 +26,7 @@ const USDCCotization = lazy(() => import("./components/cotizations/pages/usdc"))
 //Legal
 const Terms = lazy(() => import("./components/legal/terms"));
 const Privacity = lazy(() => import("./components/legal/privacity"));
+const LimitsComitions = lazy(() => import("./components/legal/limits-comitions"));
 
 //Loading screen
 import LoadingScreen from "./components/shared/components/loaders/loading-screen";
@@ -51,6 +52,7 @@ const App = () => {
 						<Route path="/nosotros" component={About} />
 						<Route path="/legal/terms" component={Terms} />
 						<Route path="/legal/priv" component={Privacity} />
+						<Route path="/legal/limites-comiciones" component={LimitsComitions} />
 
 						<CryptoContextProvider>
 							<Route path="/cotizaciones/bitcoin" component={BitcoinCotization} />

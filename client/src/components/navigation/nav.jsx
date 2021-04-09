@@ -28,6 +28,11 @@ const Nav = () => {
 							Nostros
 						</a>
 					</li>
+					<li>
+						<a href="/legal/limites-comiciones" className={`nav__links ${linkspseudo}`}>
+							Limites y comisiones
+						</a>
+					</li>
 				</ul>
 				<AuthBtns />
 			</nav>

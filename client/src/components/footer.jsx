@@ -40,6 +40,7 @@ const Footer = () => {
 								<h5>Empresa</h5>
 								<a href="/nosotros">Nosotros</a>
 								<a href="/legal/terms">Términos y condiciones</a>
+								<a href="/legal/limites-comiciones">Límites y comiciones</a>
 								<a href="/legal/priv">Privacidad</a>
 							</div>
 						</div>

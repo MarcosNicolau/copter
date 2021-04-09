@@ -1,8 +1,6 @@
 import React from "react";
 import LegalTitle from "./legal-title";
 import Conditions from "./conditions";
-import Limits from "./limits";
-import Comitions from "./comitions";
 
 const Terms = () => {
 	return (
@@ -16,8 +14,6 @@ const Terms = () => {
 				</LegalTitle>
 				<div className="container legal__text">
 					<Conditions />
-					<Limits />
-					<Comitions />
 				</div>
 			</div>
 		</section>
