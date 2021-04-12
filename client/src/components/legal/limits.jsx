@@ -33,9 +33,9 @@ const Limits = () => {
 					</ul>
 					<ul>
 						<h5>RSR:</h5>
-						<li>5 ETH diario</li>
-						<li>10 ETH semanal</li>
-						<li>20 ETH mensual</li>
+						<li>37000 RSR diario</li>
+						<li>74000 RSR semanal</li>
+						<li>148000 RSR mensual</li>
 					</ul>
 				</ul>
 
@@ -67,9 +67,9 @@ const Limits = () => {
 					</ul>
 					<ul>
 						<h5>RSR:</h5>
-						<li>5 ETH diario</li>
-						<li>10 ETH semanal</li>
-						<li>20 ETH mensual</li>
+						<li>22000 RSR diario</li>
+						<li>44000 RSR semanal</li>
+						<li>88000 RSR mensual</li>
 					</ul>
 				</ul>
 
@@ -95,9 +95,9 @@ const Limits = () => {
 					</ul>
 					<ul>
 						<h5>RSR:</h5>
-						<li>15.000 ARS diario</li>
-						<li>15.000 ARS semanal</li>
-						<li>15.000 ARS mensual</li>
+						<li>15.000 RSR diario</li>
+						<li>15.000 RSR semanal</li>
+						<li>15.000 RSR mensual</li>
 					</ul>
 				</ul>
 			</div>
