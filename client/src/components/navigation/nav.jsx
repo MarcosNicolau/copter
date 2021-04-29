@@ -25,7 +25,7 @@ const Nav = () => {
 					</li>
 					<li>
 						<a href="/nosotros" className={`nav__links ${linkspseudo}`}>
-							Nostros
+							Nosotros
 						</a>
 					</li>
 					<li>
