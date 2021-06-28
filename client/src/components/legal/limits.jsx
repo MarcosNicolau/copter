@@ -76,6 +76,12 @@ const Limits = () => {
 				<ul>
 					<h4>Si usted es nivel Basico los límites son:</h4>
 					<ul>
+						<h5>ARS:</h5>
+						<li>150.000 diario</li>
+						<li>150.000 semanal</li>
+						<li>150.000 mensual</li>
+					</ul>
+					<ul>
 						<h5>U$D & USDC & RSV</h5>
 						<li>1.000 U$D & USDC & RSV diario</li>
 						<li>1.000 U$D & USDC & RSV semanal</li>
