@@ -4,7 +4,7 @@ import controlIcon from "../../assets/icons/home/features/control.svg";
 import evaluationIcon from "../../assets/icons/home/features/evaluation.svg";
 import informedIcon from "../../assets/icons/home/features/informed.svg";
 import supportIcon from "../../assets/icons/home/features/support.svg";
-import Card from "../shared/components/card.jsx";
+import Card from "../shared/components/card";
 import SectionTitle from "../shared/components/section-title.jsx";
 
 const Features = () => {

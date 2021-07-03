@@ -3,6 +3,7 @@ import initial from "../../../assets/cryptos/initial/ethereum.svg";
 import logo from "../../../assets/cryptos/full/ethereum.svg";
 import illustration from "../../../assets/illustrations/cotization/ethereum.svg";
 import Cotization from "../cotization";
+import CryptoContextProvider from "../context";
 
 const EthereumCotization = () => {
 	const cryptoInfo = {
@@ -24,12 +25,14 @@ const EthereumCotization = () => {
 	También como bitcoin, el valor de ether se disparó en un corto periodo de tiempo.`;
 
 	return (
-		<Cotization
-			cryptoInfo={cryptoInfo}
-			pricing={pricing}
-			explanation={explanation}
-			chart="true"
-		/>
+		<CryptoContextProvider>
+			<Cotization
+				cryptoInfo={cryptoInfo}
+				pricing={pricing}
+				explanation={explanation}
+				chart="true"
+			/>
+		</CryptoContextProvider>
 	);
 };
 

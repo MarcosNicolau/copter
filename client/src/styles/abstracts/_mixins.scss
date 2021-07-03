@@ -45,7 +45,7 @@
 	max-width: 70%;
 	margin: 0 auto;
 
-	@include mq("small") {
+	@include mq("small-medium") {
 		max-width: 85%;
 	}
 }

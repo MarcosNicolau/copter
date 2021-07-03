@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "./nav.jsx";
-import MobileNav from "./mobile-nav.jsx";
+import Nav from "./nav";
+import MobileNav from "./mobile-nav";
 
 const Navigation = () => {
 	return (

@@ -1,6 +1,7 @@
 import React from "react";
 import initial from "../../../assets/cryptos/initial/rsr.svg";
 import illustration from "../../../assets/illustrations/cotization/rsr.svg";
+import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
 
 const ReserveCotization = () => {
@@ -26,7 +27,14 @@ const ReserveCotization = () => {
 	es ayudar a mantener la estabilidad de RSV.`;
 
 	return (
-		<Cotization cryptoInfo={cryptoInfo} pricing={pricing} explanation={explanation} chart="" />
+		<CryptoContextProvider>
+			<Cotization
+				cryptoInfo={cryptoInfo}
+				pricing={pricing}
+				explanation={explanation}
+				chart=""
+			/>
+		</CryptoContextProvider>
 	);
 };
 

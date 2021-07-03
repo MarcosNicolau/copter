@@ -3,11 +3,12 @@ import { useCryptoContext } from "./context";
 import { usePriceContext } from "./price/context";
 import { useExplanationContext } from "./explanation/context";
 import { useChartContext } from "./chart/context";
-import Price from "./price/price.jsx";
-const CryptoChart = lazy(() => import("./chart/chart.jsx"));
-import Explanation from "./explanation/explanation.jsx";
+import Price from "./price/price";
+const CryptoChart = lazy(() => import("./chart/chart"));
+import Explanation from "./explanation/explanation";
 import StartOperate from "../shared/components/start-operate";
 import LoadingScreen from "../shared/components/loaders/loading-screen";
+import { useNavContext } from "../shared/states/nav-context";
 
 const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	const { state: cryptoState, cryptoActions, dispatch: cryptoDispatch } = useCryptoContext();
@@ -16,6 +17,8 @@ const Cotization = ({ cryptoInfo, pricing, explanation, chart }) => {
 	const { state: chartState, getChartData } = useChartContext();
 	const { pairs, currency } = pricing;
 	const { name, abbr, initialLogo, logo, illustration, color } = cryptoInfo;
+	const { setIsNavLight } = useNavContext();
+	useEffect(() => setIsNavLight(true), []);
 
 	//Set crypto and its pairs
 	useEffect(() => {

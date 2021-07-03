@@ -1,6 +1,7 @@
 import React from "react";
 import initial from "../../../assets/cryptos/initial/rsv.svg";
 import illustration from "../../../assets/illustrations/cotization/rsv.svg";
+import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
 
 const ReserveCotization = () => {
@@ -20,7 +21,14 @@ const ReserveCotization = () => {
 	alta inflacion, protejan su dinero. Ademas, es una criptomoneda que incrementa la rentabilidad del envio de dinero transfronterizo.`;
 
 	return (
-		<Cotization cryptoInfo={cryptoInfo} pricing={pricing} explanation={explanation} chart="" />
+		<CryptoContextProvider>
+			<Cotization
+				cryptoInfo={cryptoInfo}
+				pricing={pricing}
+				explanation={explanation}
+				chart=""
+			/>
+		</CryptoContextProvider>
 	);
 };
 

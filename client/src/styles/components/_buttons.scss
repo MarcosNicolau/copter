@@ -87,3 +87,13 @@
 		text-shadow: 0 0 2px var(--clr-neutral-1000);
 	}
 }
+
+.btn--text {
+	color: var(--clr-primary-400);
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+@each $size, $size-value in $sizes {
+	.height-#{$size} {
+		height: $size-value;
+	}
+	.width-#{$size} {
+		width: $size-value;
+	}
+}
+
+@each $size, $size-value in $sizes {
+	@include mq("medium") {
+		.height-medium-#{$size} {
+			height: $size-value;
+		}
+		.width-medium-#{$size} {
+			width: $size-value;
+		}
+	}
+}
+
+.width-fit-content {
+	width: fit-content;
+}
+
+.min-height-100vh {
+	min-height: 100vh;
+}

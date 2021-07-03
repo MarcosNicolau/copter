@@ -1,6 +1,12 @@
 import React from "react";
 
-const Card = ({ title, icon, type, children }) => {
+interface Props {
+	title: string;
+	icon: string;
+	type: string;
+}
+
+const Card: React.FC<Props> = ({ title, icon, type, children }) => {
 	return (
 		<div className="card" id={type} data-aos="fade-up">
 			<div className={`card__img-container`}>

@@ -1,23 +1,16 @@
-const cryptoState = {
-	name: undefined,
-	abbr: undefined,
-	initialLogo: undefined,
-	logo: undefined,
-	illustration: undefined,
-	color: undefined,
-};
+import { CotizationActions, CotizationState } from "./types";
 
 const cryptoActions = {
 	SET_CRYPTO: "set-crypto",
 };
 
-const cryptoReducer = (state, action) => {
+const cryptoReducer = (state: CotizationState, action: CotizationActions) => {
 	const { name, abbr, initialLogo, logo, illustration, color } = action.payload;
 	switch (action.type) {
-		case cryptoActions.SET_CRYPTO:
+		case "set-crypto":
 			return { ...state, name, abbr, initialLogo, logo, illustration, color };
 	}
 };
 
 export default cryptoReducer;
-export { cryptoState, cryptoActions };
+export { cryptoActions };

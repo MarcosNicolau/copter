@@ -1,6 +1,7 @@
 import React from "react";
 import initial from "../../../assets/cryptos/initial/usdc.svg";
 import illustration from "../../../assets/illustrations/cotization/usdc.svg";
+import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
 
 const USDCCotization = () => {
@@ -21,7 +22,14 @@ const USDCCotization = () => {
     El consorcio The Centre, que está detrás de este activo, dice que la USDC es emitida por instituciones financieras reguladas.`;
 
 	return (
-		<Cotization cryptoInfo={cryptoInfo} pricing={pricing} explanation={explanation} chart="" />
+		<CryptoContextProvider>
+			<Cotization
+				cryptoInfo={cryptoInfo}
+				pricing={pricing}
+				explanation={explanation}
+				chart=""
+			/>
+		</CryptoContextProvider>
 	);
 };
 

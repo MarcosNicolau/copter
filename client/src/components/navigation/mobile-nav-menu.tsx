@@ -1,10 +1,16 @@
 import React from "react";
-import CotizationsLinks from "./dropdown-links/cotizations-links.jsx";
-import AuthBtns from "./auth-btns.jsx";
-import close from "../../assets/miscellaneous/navigation/close.svg";
+import CotizationsLinks from "./dropdown-links/cotizations-links";
+import AuthBtns from "./auth-btns";
+import closeIcon from "../../assets/miscellaneous/navigation/close.svg";
 import logoLight from "../../assets/company/logo-light.svg";
+import MobileNavLink from "./link-mobile";
 
-const MobileNavMenu = ({ isNavOpen, setNavState }) => {
+interface Props {
+	isNavOpen: boolean;
+	close: () => void;
+}
+
+const MobileNavMenu: React.FC<Props> = ({ isNavOpen, close }) => {
 	return (
 		<div
 			className={`mobile-nav-menu bg-primary-100 text-neutral-1000 ${
@@ -13,24 +19,12 @@ const MobileNavMenu = ({ isNavOpen, setNavState }) => {
 		>
 			<div className="flex-row-between container mobile-nav-menu__top">
 				<img src={logoLight} alt="copter" className="nav__logo" />
-				<img src={close} alt="close" onClick={setNavState} className="padding-100" />
+				<img src={closeIcon} alt="close" onClick={close} className="padding-100" />
 			</div>
 			<ul className="mobile-nav-menu__links-container">
-				<li>
-					<a href="/" className="mobile-nav-menu__links">
-						<h5>Inicio</h5>
-					</a>
-				</li>
-				<li>
-					<a href="/nosotros" className="mobile-nav-menu__links">
-						<h5>Nosotros</h5>
-					</a>
-				</li>
-				<li>
-					<a href="/legal/limites-comiciones" className="mobile-nav-menu__links">
-						<h5>Límites y comiciones</h5>
-					</a>
-				</li>
+				<MobileNavLink name="Inicio" to="/" />
+				<MobileNavLink name="Nosotros" to="/nosotros" />
+				<MobileNavLink name="Límites y comisiones" to="/legal/limites-comisiones" />
 				<ul className="mobile-nav-menu__dropdown-links">
 					<h5>Cotizaciones: </h5>
 					<CotizationsLinks />

@@ -3,6 +3,7 @@ import bitcoinInitial from "../../../assets/cryptos/initial/bitcoin.svg";
 import bitcoinLogo from "../../../assets/cryptos/full/bitcoin.svg";
 import bitcoinIllustration from "../../../assets/illustrations/cotization/bitcoin.svg";
 import Cotization from "../cotization";
+import CryptoContextProvider from "../context";
 
 const BitcoinCotization = () => {
 	const cryptoInfo = {
@@ -25,12 +26,14 @@ const BitcoinCotization = () => {
 	lo que significa que no está controlada por ningún banco o gobierno.`;
 
 	return (
-		<Cotization
-			cryptoInfo={cryptoInfo}
-			pricing={pricing}
-			explanation={explanation}
-			chart="true"
-		/>
+		<CryptoContextProvider>
+			<Cotization
+				cryptoInfo={cryptoInfo}
+				pricing={pricing}
+				explanation={explanation}
+				chart="true"
+			/>
+		</CryptoContextProvider>
 	);
 };
 

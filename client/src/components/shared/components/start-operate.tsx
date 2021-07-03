@@ -4,9 +4,33 @@ import budgetIcon from "../../../assets/icons/budget.svg";
 import buyCryptosIcon from "../../../assets/icons/buy-cryptos.svg";
 import valuationsIcon from "../../../assets/icons/valuations.svg";
 
-const StartOperate = ({ lineColor }) => {
-	const lineBg =
-		lineColor === "light" ? "start-operate__line--light" : "start-operate__line--dark";
+interface StepProps {
+	desc: string;
+	icon: string;
+	delay: string;
+}
+
+const Step: React.FC<StepProps> = ({ desc, icon, delay }) => {
+	return (
+		<div
+			className="start-operate__step flex-column-center"
+			data-aos="fade-left"
+			data-aos-delay={delay}
+		>
+			<div className="start-operate__step-img-container">
+				<img src={icon} alt="deposita" />
+			</div>
+			<h4>{desc}</h4>
+		</div>
+	);
+};
+
+interface Props {
+	isLineLight: boolean;
+}
+
+const StartOperate: React.FC<Props> = ({ isLineLight }) => {
+	const lineBg = isLineLight ? "start-operate__line--light" : "start-operate__line--dark";
 	return (
 		<section>
 			<div className="space start-operate container">
@@ -15,7 +39,7 @@ const StartOperate = ({ lineColor }) => {
 				</SectionTitle>
 
 				<div className="flex-row-center start-operate__steps">
-					<Step desc="Depositá pesos" icon={budgetIcon} />
+					<Step desc="Depositá pesos" icon={budgetIcon} delay="0" />
 					<div
 						className={`start-operate__line ${lineBg}`}
 						data-aos="fade-left"
@@ -31,21 +55,6 @@ const StartOperate = ({ lineColor }) => {
 				</div>
 			</div>
 		</section>
-	);
-};
-
-const Step = ({ desc, icon, delay }) => {
-	return (
-		<div
-			className="start-operate__step flex-column-center"
-			data-aos="fade-left"
-			data-aos-delay={delay}
-		>
-			<div className="start-operate__step-img-container">
-				<img src={icon} alt="deposita" />
-			</div>
-			<h4>{desc}</h4>
-		</div>
 	);
 };
 

@@ -1,17 +1,20 @@
 import React from "react";
 import { useNavContext } from "../shared/states/nav-context";
 
-const AuthBtns = ({ mobileClass }) => {
-	const {
-		state: { loginColor, registerColor },
-	} = useNavContext();
+interface Props {
+	mobileClass?: string;
+}
+
+const AuthBtns: React.FC<Props> = ({ mobileClass }) => {
+	const { isNavLight } = useNavContext();
+
 	return (
 		<div className="flex-row-center button-container">
-			<a className={loginColor} href="https://app.exchangecopter.com/login">
+			<a className={`button auth`} href="https://app.exchangecopter.com/login">
 				Acceder
 			</a>
 			<a
-				className={`${registerColor} ${mobileClass}`}
+				className={`button auth ${isNavLight ? "auth--light" : "auth--blue"}`}
 				href="https://app.exchangecopter.com/signup"
 			>
 				Registrate

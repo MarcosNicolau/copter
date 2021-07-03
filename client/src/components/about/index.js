@@ -6,8 +6,8 @@ import Reviews from "./reviews.jsx";
 import CTA from "./cta.jsx";
 
 const About = () => {
-	const { dispatch, navActions } = useNavContext();
-	useEffect(() => dispatch({ type: navActions.SET_BLUE_NAV }), [dispatch, navActions]);
+	const { setIsNavLight } = useNavContext();
+	useEffect(() => setIsNavLight(false), [setIsNavLight]);
 
 	return (
 		<>

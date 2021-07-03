@@ -28,6 +28,9 @@ const Terms = lazy(() => import("./components/legal/terms"));
 const Privacity = lazy(() => import("./components/legal/privacity"));
 const LimitsComitions = lazy(() => import("./components/legal/limits-comitions"));
 
+//FAQ
+const Help = lazy(() => import("./components/help"));
+
 //Loading screen
 import LoadingScreen from "./components/shared/components/loaders/loading-screen";
 
@@ -35,7 +38,7 @@ const App = () => {
 	useEffect(
 		() =>
 			AOS.init({
-				once: "false",
+				once: true,
 				easing: "ease",
 				duration: 1200,
 				disable: "mobile",
@@ -48,22 +51,21 @@ const App = () => {
 				<NavContextProvider>
 					<Navigation />
 					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/nosotros" component={About} />
-						<Route path="/legal/terms" component={Terms} />
-						<Route path="/legal/priv" component={Privacity} />
-						<Route path="/legal/limites-comiciones" component={LimitsComitions} />
-
-						<CryptoContextProvider>
-							<Route path="/cotizaciones/bitcoin" component={BitcoinCotization} />
-							<Route path="/cotizaciones/ethereum" component={EthereumCotization} />
-							<Route path="/cotizaciones/reserve" component={ReserveCotization} />
-							<Route
-								path="/cotizaciones/reserverights"
-								component={ReserveRightsCotization}
-							/>
-							<Route path="/cotizaciones/usdc" component={USDCCotization} />
-						</CryptoContextProvider>
+						<Route exact path="/nosotros" component={About} />
+						<Route exact path="/legal/terms" component={Terms} />
+						<Route exact path="/legal/priv" component={Privacity} />
+						<Route exact path="/legal/limites-comisiones" component={LimitsComitions} />
+						<Route exact path="/ayuda" component={Help} />
+						<Route exact path="/cotizaciones/bitcoin" component={BitcoinCotization} />
+						<Route exact path="/cotizaciones/ethereum" component={EthereumCotization} />
+						<Route exact path="/cotizaciones/reserve" component={ReserveCotization} />
+						<Route
+							exact
+							path="/cotizaciones/reserverights"
+							component={ReserveRightsCotization}
+						/>
+						<Route exact path="/cotizaciones/usdc" component={USDCCotization} />
+						<Route path="/" component={Home} />
 					</Switch>
 				</NavContextProvider>
 				<Footer />
