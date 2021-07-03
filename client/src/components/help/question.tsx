@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { SetState } from "../shared/types/set-state";
 import dropdown from "../../assets/miscellaneous/navigation/dropdown.svg";
 
@@ -26,7 +26,7 @@ const Question: React.FC<Props> = ({
 		if (!contentRef.current) return;
 		//Get the content height and add 20.
 		//The reason we have to add 20 is because some content isn't shown.
-		setContentHeight(contentRef.current.clientHeight + 20);
+		setContentHeight(contentRef.current.clientHeight + 25);
 	}, [contentRef]);
 
 	return (

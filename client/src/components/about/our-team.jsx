@@ -7,14 +7,19 @@ import leandro from "../../assets/company/team/leandro.jpg";
 import marcos from "../../assets/company/team/marcos.jpg";
 
 const TeamMember = ({ photo, name, position, linkedin }) => {
+	const handleLinkedinRedirect = () => window.open(linkedin);
+
 	return (
 		<div className="flex-column-center  our-team__member">
 			<img src={photo} alt={name} className="our-team__member__profile" />
 			<h5>{name}</h5>
 			<p>{position}</p>
-			<a href={linkedin}>
-				<img src={linkedinIcon} alt="linkedin" />
-			</a>
+			<img
+				src={linkedinIcon}
+				alt="linkedin"
+				onClick={handleLinkedinRedirect}
+				className="pointer"
+			/>
 		</div>
 	);
 };

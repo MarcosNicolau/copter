@@ -2,7 +2,7 @@ import React from "react";
 import CotizationsLinks from "./dropdown-links/cotizations-links";
 import AuthBtns from "./auth-btns";
 import closeIcon from "../../assets/miscellaneous/navigation/close.svg";
-import logoLight from "../../assets/company/logo-light.svg";
+import logoLight from "../../assets/company/logo-light.png";
 import MobileNavLink from "./link-mobile";
 
 interface Props {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useNavContext } from "../shared/states/nav-context";
+import { useNavContext } from "../states/nav-context";
 
-const LegalTitle = ({ children }) => {
+const LegalTitle: React.FC = ({ children }) => {
 	const { setIsNavLight } = useNavContext();
 	useEffect(() => setIsNavLight(false), [setIsNavLight]);
 

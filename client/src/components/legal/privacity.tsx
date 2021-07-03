@@ -1,11 +1,11 @@
 import React from "react";
-import LegalTitle from "./legal-title";
+import LegalTitle from "../shared/components/background-title";
 
 const Privacity = () => {
 	return (
 		<section>
 			<LegalTitle>Privacidad</LegalTitle>
-			<div className="container legal__text">
+			<div className="container legal legal__text">
 				<div>
 					<h3>Declaro: </h3>
 					<p>

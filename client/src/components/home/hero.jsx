@@ -1,6 +1,6 @@
 import React from "react";
 import heroIllustration from "../../assets/illustrations/home/hero.svg";
-import fullLogoLight from "../../assets/company/full-logo-light.svg";
+import fullLogoLight from "../../assets/company/full-logo-light.png";
 
 const Hero = () => {
 	return (
@@ -11,7 +11,7 @@ const Hero = () => {
 						<div className="hero__title">
 							<h1 data-aos="fade-up" data-aos-delay="300">
 								Súmate a la revolución
-								<span className="break">de las cryptos con</span>
+								<br /> de las cryptos <span>con</span>
 								<img src={fullLogoLight} alt="copter" className="hero__logo" />
 							</h1>
 							<p

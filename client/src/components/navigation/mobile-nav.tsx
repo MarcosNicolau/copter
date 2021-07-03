@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useNavContext } from "../shared/states/nav-context";
 import MobileNavMenu from "./mobile-nav-menu";
-import logoBlue from "../../assets/company/logo.svg";
-import logoLight from "../../assets/company/logo-light.svg";
+import logoBlue from "../../assets/company/logo.png";
+import logoLight from "../../assets/company/logo-light.png";
 import hamburgerBlue from "../../assets/miscellaneous/navigation/hamburguer.svg";
 import hamburgerLight from "../../assets/miscellaneous/navigation/hamburguer-light.svg";
 

@@ -5,8 +5,8 @@ import CotizationsLinks from "./dropdown-links/cotizations-links";
 import AuthBtns from "./auth-btns";
 import NavLink from "./link";
 import { Link } from "react-router-dom";
-import logoBlue from "../../assets/company/logo.svg";
-import logoLight from "../../assets/company/logo-light.svg";
+import logoBlue from "../../assets/company/logo.png";
+import logoLight from "../../assets/company/logo-light.png";
 
 const Nav = () => {
 	const { isNavLight } = useNavContext();
@@ -34,8 +34,6 @@ const Nav = () => {
 						</Dropdown>
 					</li>
 					<NavLink name="Nosotros" to="/nosotros" />
-					<NavLink name="Límites y comisiones" to="/legal/limites-comisiones" />
-					<NavLink name="Ayuda" to="/ayuda" />
 				</ul>
 				<AuthBtns />
 			</nav>

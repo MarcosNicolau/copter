@@ -2,10 +2,9 @@ import React, { useCallback } from "react";
 import drawCanvas from "./canvas";
 
 const SpaceBackground = () => {
-	const canvasResize = (e) => {
-		if (e.target.innerWidth < 1000) return;
+	const canvasResize = useCallback(() => {
 		drawCanvas(document.querySelector("canvas"));
-	};
+	}, []);
 
 	const canvasRef = useCallback((canvas) => {
 		drawCanvas(canvas);

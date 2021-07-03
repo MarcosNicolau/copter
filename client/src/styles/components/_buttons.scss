@@ -62,7 +62,6 @@
 	border-color: var(--clr-secondary-200);
 	background-color: var(--clr-secondary-200);
 	color: var(--clr-neutral-1000);
-	@include box-shadow($color: rgba(255, 255, 255, 0.16));
 }
 
 .cta--violet-1 {
@@ -81,7 +80,6 @@
 	border-color: var(--clr-neutral-1000);
 	background-color: var(--clr-neutral-1000);
 	color: var(--clr-secondary-100);
-	@include box-shadow($color: rgba(188, 176, 255, 0.507));
 	&:hover {
 		@include btn-hover(transparent, var(--clr-neutral-1000), var(--clr-neutral-1000));
 		text-shadow: 0 0 2px var(--clr-neutral-1000);

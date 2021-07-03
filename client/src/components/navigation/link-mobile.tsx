@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useNavContext } from "../shared/states/nav-context";
 
 interface Props {
 	name: string;

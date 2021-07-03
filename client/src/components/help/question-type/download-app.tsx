@@ -36,7 +36,7 @@ const DownloadApp = () => {
 					</QuestionText>
 				</Question>
 				<Question
-					question="¿Como hago para descargarla?"
+					question="¿Cómo hago para descargarla?"
 					openedQuestion={openedQuestion}
 					setOpenedQuestion={setOpenedQuestion}
 					questionNumber={2}

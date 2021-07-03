@@ -47,7 +47,7 @@
 		padding: 0 0.5rem;
 		padding-bottom: 0.5rem;
 		p {
-			font-size: 18px;
+			font-size: var(--fs-450);
 			margin: 0;
 			flex: 1;
 		}
@@ -73,7 +73,7 @@
 		padding: 0 0.5rem;
 
 		p {
-			font-size: 18px;
+			font-size: var(--fs-450);
 			color: var(--clr-neutral-200);
 		}
 

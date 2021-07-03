@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import LegalTitle from "../legal/legal-title";
+import LegalTitle from "../shared/components/background-title";
 import { useNavContext } from "../shared/states/nav-context";
 import QuestionsWrapper from "./questions-wrapper";
 

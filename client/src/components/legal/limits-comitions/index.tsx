@@ -1,7 +1,7 @@
 import React from "react";
 import Limits from "./limits";
 import Comitions from "./comitions";
-import LegalTitle from "./legal-title";
+import LegalTitle from "../../shared/components/background-title";
 
 const LimitsComitions = () => {
 	return (

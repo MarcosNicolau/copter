@@ -6,11 +6,11 @@ import "aos/dist/aos.css";
 
 //Contexts
 const NavContextProvider = lazy(() => import("./components/shared/states/nav-context"));
-const CryptoContextProvider = lazy(() => import("./components/cotizations/context"));
 
 //Nav and footer
 import Navigation from "./components/navigation";
 import Footer from "./components/footer.jsx";
+import ScrollToTop from "./components/shared/utils/scroll-top";
 
 //Pages
 const Home = lazy(() => import("./components/home"));
@@ -27,6 +27,7 @@ const USDCCotization = lazy(() => import("./components/cotizations/pages/usdc"))
 const Terms = lazy(() => import("./components/legal/terms"));
 const Privacity = lazy(() => import("./components/legal/privacity"));
 const LimitsComitions = lazy(() => import("./components/legal/limits-comitions"));
+const RiskPolicy = lazy(() => import("./components/legal/risk-policy"));
 
 //FAQ
 const Help = lazy(() => import("./components/help"));
@@ -50,11 +51,13 @@ const App = () => {
 			<Suspense fallback={<LoadingScreen />}>
 				<NavContextProvider>
 					<Navigation />
+					<ScrollToTop />
 					<Switch>
 						<Route exact path="/nosotros" component={About} />
 						<Route exact path="/legal/terms" component={Terms} />
 						<Route exact path="/legal/priv" component={Privacity} />
 						<Route exact path="/legal/limites-comisiones" component={LimitsComitions} />
+						<Route exact path="/legal/risk" component={RiskPolicy} />
 						<Route exact path="/ayuda" component={Help} />
 						<Route exact path="/cotizaciones/bitcoin" component={BitcoinCotization} />
 						<Route exact path="/cotizaciones/ethereum" component={EthereumCotization} />

@@ -9,7 +9,7 @@ const Support = () => {
 	return (
 		<Questions name="Soporte">
 			<Question
-				question="¿Como me puedo comunicar con el soporte?"
+				question="¿Cómo me puedo comunicar con el soporte?"
 				openedQuestion={openedQuestion}
 				setOpenedQuestion={setOpenedQuestion}
 				questionNumber={1}

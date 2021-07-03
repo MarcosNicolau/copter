@@ -1,8 +1,14 @@
 import React from "react";
-import fullLogoLight from "../assets/company/full-logo-light.svg";
+import fullLogoLight from "../assets/company/full-logo-light.png";
 import facebook from "../assets/company/contact/facebook.svg";
 import instagram from "../assets/company/contact/instagram.svg";
 import linkedin from "../assets/company/contact/linkedin.svg";
+import { Link } from "react-router-dom";
+import {
+	redirectToFacebook,
+	redirectToInstagram,
+	redirectToLinkedin,
+} from "./shared/utils/redirects";
 
 const Footer = () => {
 	return (
@@ -29,19 +35,24 @@ const Footer = () => {
 						</div>
 						<div className="flex-row">
 							<div className="flex-column footer__links">
+								<h5>Recursos</h5>
+								<Link to="/ayuda">Centro de ayuda</Link>
+							</div>
+							<div className="flex-column footer__links">
 								<h5>Cotizaciones</h5>
-								<a href="/cotizaciones/bitcoin">Bitcoin</a>
-								<a href="/cotizaciones/ethereum">Ethereum</a>
-								<a href="/cotizaciones/usdc">USDC</a>
-								<a href="/cotizaciones/reserve">Reserve</a>
-								<a href="/cotizaciones/reserverights">Reserve Rights</a>
+								<Link to="/cotizaciones/bitcoin">Bitcoin</Link>
+								<Link to="/cotizaciones/ethereum">Ethereum</Link>
+								<Link to="/cotizaciones/usdc">USDC</Link>
+								<Link to="/cotizaciones/reserve">Reserve</Link>
+								<Link to="/cotizaciones/reserverights">Reserve Rights</Link>
 							</div>
 							<div className="flex-column footer__links">
 								<h5>Empresa</h5>
-								<a href="/nosotros">Nosotros</a>
-								<a href="/legal/terms">Términos y condiciones</a>
-								<a href="/legal/limites-comiciones">Límites y comiciones</a>
-								<a href="/legal/priv">Privacidad</a>
+								<Link to="/nosotros">Nosotros</Link>
+								<Link to="/legal/terms">Términos y condiciones</Link>
+								<Link to="/legal/risk">Política de riesgo</Link>
+								<Link to="/legal/priv">Privacidad</Link>
+								<Link to="/legal/limites-comisiones">Límites y comisiones</Link>
 							</div>
 						</div>
 					</div>
@@ -51,15 +62,21 @@ const Footer = () => {
 								support@exchangecopter.com
 							</p>
 							<div className="flex-row-center footer__contact">
-								<a href="https://www.facebook.com/copterNews">
-									<img src={facebook} alt="facebook contact" />
-								</a>
-								<a href="https://www.instagram.com/copter_news/">
-									<img src={instagram} alt="instagram contact" />
-								</a>
-								<a href="https://www.linkedin.com/company/cotperexchange">
-									<img src={linkedin} alt="linkedin contact" />
-								</a>
+								<img
+									src={facebook}
+									alt="facebook contact"
+									onClick={redirectToFacebook}
+								/>
+								<img
+									src={instagram}
+									alt="instagram contact"
+									onClick={redirectToInstagram}
+								/>
+								<img
+									src={linkedin}
+									alt="linkedin contact"
+									onClick={redirectToLinkedin}
+								/>
 							</div>
 						</div>
 					</div>

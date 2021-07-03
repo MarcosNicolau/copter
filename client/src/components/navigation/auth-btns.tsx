@@ -14,7 +14,9 @@ const AuthBtns: React.FC<Props> = ({ mobileClass }) => {
 				Acceder
 			</a>
 			<a
-				className={`button auth ${isNavLight ? "auth--light" : "auth--blue"}`}
+				className={`button auth ${
+					mobileClass ? mobileClass : isNavLight ? "auth--light" : "auth--blue"
+				} `}
 				href="https://app.exchangecopter.com/signup"
 			>
 				Registrate
