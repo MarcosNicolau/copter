@@ -40,7 +40,7 @@ const CryptoChart = () => {
 						</div>
 						<div className="flex-column-center">
 							<h5>Valoración:</h5>
-							{prices.length ? null : <DotsLoader color={color} />}
+							{prices && prices.length ? null : <DotsLoader color={color} />}
 							<h4 ref={datapoint}></h4>
 						</div>
 						<div className="flex-row chart__timestamps">

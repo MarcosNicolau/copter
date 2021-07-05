@@ -26,6 +26,8 @@ const Price = () => {
 			payload: e.target.value,
 		});
 
+	console.log(currency);
+
 	return (
 		<section>
 			<div className="price">

@@ -68,8 +68,13 @@ const Basic = () => {
 				questionNumber={3}
 			>
 				<QuestionText>
-					Tanto para los depósitos en pesos/usd como para los retiros y soporte técnico el
-					exchange trabaja de lunes a viernes entre las 9 hs y 19 hs. El trading es 24/7.
+					Todas las direcciones de bitcoin tienen una clave privada asociada. La clave
+					privada está relacionada con la dirección de bitcoin, y está diseñada para que
+					la dirección de bitcoin pueda ser calculada a partir de la clave privada, pero
+					la operación contraria sea imposible de hacer. Esto significa que nadie puede
+					saber tu clave privada viendo tu dirección de bitcoin. Debido a que la clave
+					privada es la llave que te permite gastar los bitcoins, es importante guardarla
+					de forma segura.
 				</QuestionText>
 			</Question>
 			<Question

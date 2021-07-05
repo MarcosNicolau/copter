@@ -15,7 +15,7 @@ const ReserveCotization = () => {
 		color: "#000",
 	};
 	const pricing = {
-		currency: "ARS",
+		currency: "BTC",
 		pairs: [
 			{ currency: "BTC", name: "Bitcoin" },
 			{ currency: "ARS", name: "Pesos" },
