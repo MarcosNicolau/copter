@@ -5,6 +5,13 @@
 		font-weight: $wght-value;
 	}
 }
+@each $ts, $ts-value in $type-scale {
+	@each $fs, $fs-value in $ts-value {
+		.fs-#{$fs} {
+			font-size: var(--fs-#{$fs});
+		}
+	}
+}
 
 .text-center {
 	text-align: center;

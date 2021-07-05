@@ -35,7 +35,7 @@ const CryptoChart = () => {
 					<h4 className="title chart__title">La cotización de {name} en un gráfico</h4>
 					<div className="chart text-neutral-200">
 						<div className="flex-row align-center chart__legend">
-							<img src={logo} alt="crypto-logo" />
+							<img src={logo} alt={`${name}-logo`} />
 							<h5>{name}</h5>
 						</div>
 						<div className="flex-column-center">

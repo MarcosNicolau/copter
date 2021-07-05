@@ -3,12 +3,14 @@ import initial from "../../../assets/cryptos/initial/rsv.svg";
 import illustration from "../../../assets/illustrations/cotization/rsv.svg";
 import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
+import logo from "../../../assets/cryptos/full/rsv.svg";
 
 const ReserveCotization = () => {
 	const cryptoInfo = {
 		name: "Reserve",
 		abbr: "RSV",
 		initialLogo: initial,
+		logo,
 		illustration: illustration,
 		color: "#000",
 	};
@@ -26,7 +28,7 @@ const ReserveCotization = () => {
 				cryptoInfo={cryptoInfo}
 				pricing={pricing}
 				explanation={explanation}
-				chart=""
+				chart="true"
 			/>
 		</CryptoContextProvider>
 	);

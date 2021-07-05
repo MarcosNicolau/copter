@@ -3,12 +3,14 @@ import initial from "../../../assets/cryptos/initial/usdc.svg";
 import illustration from "../../../assets/illustrations/cotization/usdc.svg";
 import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
+import logo from "../../../assets/cryptos/full/usdc.svg";
 
 const USDCCotization = () => {
 	const cryptoInfo = {
 		name: "USDC",
 		abbr: "USDC",
 		initialLogo: initial,
+		logo,
 		illustration: illustration,
 		color: "#2675c9",
 	};
@@ -27,7 +29,7 @@ const USDCCotization = () => {
 				cryptoInfo={cryptoInfo}
 				pricing={pricing}
 				explanation={explanation}
-				chart=""
+				chart="true"
 			/>
 		</CryptoContextProvider>
 	);

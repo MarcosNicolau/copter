@@ -3,20 +3,22 @@ import initial from "../../../assets/cryptos/initial/rsr.svg";
 import illustration from "../../../assets/illustrations/cotization/rsr.svg";
 import CryptoContextProvider from "../context";
 import Cotization from "../cotization";
+import logo from "../../../assets/cryptos/full/rsr.svg";
 
 const ReserveCotization = () => {
 	const cryptoInfo = {
 		name: "Reserve Rights",
 		abbr: "RSR",
 		initialLogo: initial,
+		logo,
 		illustration: illustration,
 		color: "#000",
 	};
 	const pricing = {
 		currency: "ARS",
 		pairs: [
-			{ currency: "ARS", name: "Pesos" },
 			{ currency: "BTC", name: "Bitcoin" },
+			{ currency: "ARS", name: "Pesos" },
 		],
 	};
 	const explanation = `Reserve Rights es una plataforma de moneda estable de doble token que se lanzó en mayo de 2019. 
@@ -32,7 +34,7 @@ const ReserveCotization = () => {
 				cryptoInfo={cryptoInfo}
 				pricing={pricing}
 				explanation={explanation}
-				chart=""
+				chart="true"
 			/>
 		</CryptoContextProvider>
 	);

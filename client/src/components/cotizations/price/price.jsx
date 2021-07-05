@@ -2,16 +2,18 @@ import React from "react";
 import { usePriceContext } from "./context";
 import { useCryptoContext } from "../context";
 import DotsLoader from "../../shared/components/loaders/dots-loader";
+import { OTCText } from "../otc-text";
 
 const Price = () => {
 	const {
-		state: { name, initialLogo },
+		state: { name, initialLogo, abbr },
 	} = useCryptoContext();
 	const {
 		state: {
 			valoration: { rate, arrow, color },
 			price: { ask, bid },
 			pairs,
+
 			error,
 			currency,
 		},
@@ -61,7 +63,7 @@ const Price = () => {
 
 						<h5>Moneda</h5>
 						<select
-							name="curreny"
+							name="currency"
 							className="price__currency-selection"
 							onChange={updateCurrency}
 						>
@@ -72,6 +74,9 @@ const Price = () => {
 							))}
 						</select>
 						{error && error}
+						<p className="text-neutral-1000 fs-500">
+							{OTCText[`${abbr}${currency.abbr}`]}
+						</p>
 					</div>
 				</div>
 			</div>
