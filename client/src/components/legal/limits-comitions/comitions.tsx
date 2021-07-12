@@ -18,10 +18,10 @@ const Comitions = () => {
 			<ul>
 				<h5>Retiros:</h5>
 				<li>USD & ARS: 0.6%</li>
-				<li>BTC: 0.0004</li>
-				<li>USDC & RSV: 20</li>
-				<li>ETH: 0.007</li>
-				<li>RSR: 250</li>
+				<li>BTC: 0.0002 </li>
+				<li>USDC & RSV: 10</li>
+				<li>ETH: 0.005</li>
+				<li>RSR: 450</li>
 			</ul>
 		</div>
 	);
