@@ -31,7 +31,7 @@ const DownloadApp = () => {
 						apps)
 						<span className="btn--text" onClick={handlePWARedirect}>
 							{" "}
-							podes leer aca.
+							podes leer acá.
 						</span>
 					</QuestionText>
 				</Question>
