@@ -3,11 +3,9 @@ import { Point, Text } from "../content";
 
 const Issuer = () => {
 	return (
-		<Point title="Copter is not an issuer">
+		<Point title="Copter no es un emisor">
 			<Text>
-				Copter does not issue any Digital Currencies to its Approved Users. It solely
-				provides an exchange which enables Approved Users to buy, sell, exchange or trade
-				Digital Currencies.
+				Copter no emite monedas digitales a sus usuarios. Solo proporciona una plataforma que permite a los usuarios aprobados comprar, vender o intercambiar monedas digitales.
 			</Text>
 		</Point>
 	);

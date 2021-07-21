@@ -1,23 +1,12 @@
 import React from "react";
 import LegalTitle from "../../shared/components/background-title";
+import Normative from "./normative";
+import MoneyLaundering from "./money-laundering";
 import GeneralUse from "./general-use";
-import Introduction from "./introduction";
-import UserAccount from "./user-account";
-import Tender from "./tender";
-import Wallet from "./wallet";
-import Ledger from "./ledger";
-import Transactions from "./transactions";
-import Buy from "./buy";
-import Sell from "./sell";
-import Exchange from "./exchange";
-import Suspension from "./suspension";
-import Prohibited from "./prohibited";
-import Rights from "./rights";
-import Fees from "./fees";
 import Taxes from "./taxes";
-import Liability from "./liability";
+import Registers from "./registers";
 import Complaints from "./complaints-disputes";
-import Amendments from "./amendments";
+import TermsModification from "./terms-modification";
 
 const Terms = () => {
 	return (
@@ -30,24 +19,13 @@ const Terms = () => {
 					</span>
 				</LegalTitle>
 				<div className="container legal legal__text">
-					<Introduction />
-					<GeneralUse />
-					<UserAccount />
-					<Tender />
-					<Wallet />
-					<Ledger />
-					<Transactions />
-					<Buy />
-					<Sell />
-					<Exchange />
-					<Suspension />
-					<Prohibited />
-					<Rights />
-					<Fees />
+					<Normative />
 					<Taxes />
-					<Liability />
+					<MoneyLaundering />
+					<GeneralUse />					
+					<Registers />					
 					<Complaints />
-					<Amendments />
+					<TermsModification />
 				</div>
 			</div>
 		</section>

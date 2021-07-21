@@ -3,16 +3,12 @@ import { Point, Text } from "../content";
 
 const Guarantee = () => {
 	return (
-		<Point title="No guarantee">
+		<Point title="No hay garantías">
 			<Text>
-				Neither Copter​, nor any other person, guarantees or underwrites any transaction
-				entered into via the Services, nor assumes any responsibility or liability for any
-				loss you incur in using the Services or accessing the Site. No solicitation
+				Ni Copter, ni ninguna otra persona, garantiza o suscribe ninguna transacción realizada a través de los servicios, ni asume ninguna responsabilidad u obligación por cualquier pérdida en la que incurra al usar los servicios o acceder al Sitio.
 			</Text>
 			<Text>
-				Nothing on this Site, including this document or the Terms and Conditions, is a
-				solicitation of investment nor relates in any way to an offering of securities in
-				any jurisdiction.
+				 Nada en este sitio, incluido este documento o los Términos y Condiciones, es una solicitud de inversión ni se relaciona de ninguna manera con una oferta de valores en ninguna jurisdicción.
 			</Text>
 		</Point>
 	);

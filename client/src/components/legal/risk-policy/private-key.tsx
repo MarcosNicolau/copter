@@ -3,13 +3,9 @@ import { Point, Text } from "../content";
 
 const PrivateKey = () => {
 	return (
-		<Point title="Private key risk">
+		<Point title="Riesgo de clave privada">
 			<Text>
-				Extreme caution must be taken whenever selecting, storing or transmitting private
-				keys. If another person learns your private key, they can steal your funds. If you
-				forget or lose your private key or password details, ​Copter cannot provide a
-				back-up and this can​ result in the loss of your Digital Currencies. We strongly
-				recommend you use secure cold storage.
+				Se debe tener mucho cuidado al seleccionar, almacenar o transmitir claves privadas. Si otra persona se entera de su clave privada, puede robar sus fondos. Si olvida o pierde su clave privada o los detalles de su contraseña, Copter no puede proporcionar una copia de seguridad y esto puede resultar en la pérdida de sus monedas digitales. Le recomendamos encarecidamente que utilice almacenamiento frío seguro.
 			</Text>
 		</Point>
 	);

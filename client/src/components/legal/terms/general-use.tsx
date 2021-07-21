@@ -3,77 +3,59 @@ import { Point, Clause, List } from "../content";
 
 const GeneralUse = () => {
 	return (
-		<Point title="1. General Use">
-			<Clause>1.1 Eligibility</Clause>
+		<Point title="4. Uso general">
+			<Clause>Elegibilidad</Clause>
 			<List
-				text="You are only permitted to access the Services if you are an Approved User. This means
-			you must meet all of the following criteria:"
+				text="Solo se le permite acceder a los Servicios si es un Usuario Aprobado. Esto significa que debe cumplir con los siguientes criterios:"
 			>
-				<li>If you are an individual, you must be aged 18 years or older.</li>
+				<li>Si es un individuo, debe tener 18 años o más.</li>
 				<li>
-					You must have the capacity and, in the case of an entity, be authorized, to
-					enter into and to be bound by the Terms and Conditions and the Privacy Policy.
+					Debe tener la capacidad y, en el caso de una entidad, estar autorizado para suscribir y estar sujeto a los Términos y Condiciones y la Política de Privacidad.
 				</li>
 				<li>
-					You must provide all of the information required to set up a User Account under
-					clause 2.1.
-				</li>
-				<li>
-					Copter ​must be satisfied with the outcome of the identity, fraud, background
-					checks, and other money-laundering and terrorist financing checks it (or any
-					third party) conducts in relation to you at any time.
+					Copter debe estar satisfecho con el resultado de la identidad, el fraude, las verificaciones de antecedentes y otras verificaciones de lavado de dinero y financiamiento del terrorismo que realice (o cualquier tercero) en relación con usted en cualquier momento.
 				</li>
 			</List>
-			<Clause>1.2 Your general agreements and promises</Clause>
-			<List text="By accessing the Services, you:">
+			<Clause>Sus acuerdos y promesas generales</Clause>
+			<List text="Al acceder a los Servicios, usted:">
 				<li>
-					Warrant that, if you are an individual, you are aged 18 years or older with the
-					capacity to enter into and be bound by these Terms and Conditions and the
-					Privacy Policy;
+					Garantizar que, si es un individuo, tiene 18 años o más y tiene la capacidad de participar y estar sujeto a estos Términos y condiciones y la Política de privacidad;
 				</li>
 				<li>
-					Warrant that you have capacity and are authorized to enter into and be bound by
-					these Terms and Conditions and the Privacy Policy; and, if applicable, the
-					person acting on your behalf is authorized to do so;
+					Garantiza que tiene capacidad y está autorizado para aceptar y estar sujeto a estos Términos y condiciones y la Política de privacidad; y, si corresponde, la persona que actúa en su nombre está autorizada para hacerlo;
+
 				</li>
 				<li>
-					Authorize Copter to make any inquiries it considers necessary, from time to
-					time, to verify your identity, undertake fraud checks, and to meet its
-					anti-money laundering and other legal obligations;
+					Autorizar a Copter a realizar las consultas que considere necesarias, de vez en cuando, para verificar su identidad, realizar comprobaciones de fraude y cumplir con sus obligaciones contra el blanqueo de capitales y otras obligaciones legales;
+
 				</li>
 				<li>
-					Agree to be bound by these Terms and Conditions and our Privacy Policy, which is
-					deemed to occur when you access our Site and/or use our Services, and promise to
-					comply with them;
+					Acepta estar sujeto a estos Términos y condiciones y nuestra Política de privacidad, que se considera que ocurre cuando accede a nuestro Sitio y / o utiliza nuestros Servicios, y promete cumplir con ellos;
+
 				</li>
 				<li>
-					Agree to pay all fees associated with the Transactions and the Services which
-					are set out in the Fee Schedule and any additional miner fees.
+					Acepta pagar todas las tarifas asociadas con las Transacciones y los Servicios que se establecen en la Lista de tarifas y cualquier tarifa adicional de los mineros.
+
 				</li>
 				<li>
-					Agree to ensure that any personal information you provide to Copter is accurate,
-					current and complete and relates solely to you, and to update us if it changes;
+					Acepta asegurarse de que cualquier información personal que proporcione a Copter sea precisa, actual y completa y se relacione únicamente con usted, y actualizarnos si cambia;
+
 				</li>
 				<li>
-					Agree to provide us with any additional information which we request to comply
-					with our legal responsibilities as soon as is reasonably practicable;
+					Aceptar proporcionarnos cualquier información adicional que solicitemos para cumplir con nuestras responsabilidades legales tan pronto como sea razonablemente posible;
+
 				</li>
 				<li>
-					Confirm that you have sufficient knowledge of Digital Currencies to enter into
-					Transactions, and understand that you are solely responsible for determining the
-					nature, potential value, suitability, and appropriateness of the Services;
+					Confirmar que tiene suficiente conocimiento de las monedas digitales para realizar Transacciones y comprender que usted es el único responsable de determinar la naturaleza, el valor potencial, la idoneidad y la idoneidad de los Servicios;
+
 				</li>
 				<li>
-					Confirm that you accept the risks of using the Services and accessing the Site,
-					and have read and understand the “Risks of Use” set out here;
+					Confirme que acepta los riesgos de usar los Servicios y acceder al Sitio, y que ha leído y comprende los {`"`}Riesgos de uso{`"`};
+
 				</li>
 				<li>
-					Agree to arbitration on the terms set out in clause 16.2 (Arbitration) of these
-					Terms and Conditions;
-				</li>
-				<li>
-					Acknowledge that Copter has not advised you to, nor recommended to you that you
-					should, use the Services or deal in Digital Currencies.
+					Reconozca que Copter no le ha aconsejado ni recomendado que utilice los Servicios o negocie con Monedas Digitales.
+
 				</li>
 			</List>
 		</Point>

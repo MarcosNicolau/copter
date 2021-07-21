@@ -3,17 +3,14 @@ import { Point, Text } from "../content";
 
 const YourRisk = () => {
 	return (
-		<Point title="You access the Services at your own risk">
+		<Point title="El acceso al servicio es bajo tu propio riesgo">
 			<Text>
-				Buying, selling and trading Digital Currencies is a very risky activity. Digital
-				Currencies may experience extreme price volatility. You should carefully consider
-				whether using the Services is suitable and affordable for you in view of your
-				personal circumstances and financial resources. You should also take independent
-				financial advice. Once a Transaction involving the transfer of Digital Currencies
-				has completed, it is impossible to reverse it. See the “Risks of Use” section here.
-				​Copter ​does not make any warranty or representation in relation to any Digital
-				Currencies or any network or software which underlies or supports any Digital
-				assets.
+				Comprar, vender e intercambiar monedas digitales es una actividad muy arriesgada. Las divisas pueden experimentar una extrema volatilidad de precios. Deberías considerar cuidadosamente
+si el uso de los Servicios es adecuado y asequible para usted en vista de su
+circunstancias personales y recursos económicos. Una vez completada una transacción, es imposible revertirla.
+Copter no ofrece ninguna garantía o representación en relación con ningún activo digital
+o cualquier red o software que subyace o es compatible con cualquier activo
+digital.
 			</Text>
 		</Point>
 	);
