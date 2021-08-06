@@ -1,5 +1,5 @@
 import React from "react";
-import { Point, Clause, List } from "../content";
+import { Point, List } from "../content";
 
 const GeneralUse = () => {
 	return (

@@ -3,10 +3,7 @@ import React from "react";
 import linkedinIcon from "../../assets/company/contact/linkedin-2.svg";
 import hernan from "../../assets/company/team/hernan.jpg";
 import ignacio from "../../assets/company/team/ignacio.jpg";
-import leandro from "../../assets/company/team/leandro.jpg";
-import marcos from "../../assets/company/team/marcos.jpg";
 import pablo from "../../assets/company/team/pablo.jpg";
-import vanina from "../../assets/company/team/vanina.jpg";
 
 const TeamMember = ({ photo, name, position, linkedin }) => {
 	const handleLinkedinRedirect = () => window.open(linkedin);
@@ -56,24 +53,6 @@ const OurTeam = () => {
 						name="Ignacio Manzanel"
 						position="Chief Operating Officer"
 						linkedin="https://www.linkedin.com/in/ignacio-manzanel-b509661a9/"
-					/>
-					<TeamMember
-						photo={vanina}
-						name="Vanina Veleizan"
-						position={`Community Manager && UX`}
-						linkedin="https://www.linkedin.com/in/vanina-veleizan-272311178/"
-					/>
-					<TeamMember
-						photo={leandro}
-						name="Leandro.A. Duran"
-						position="Marketing Advisor"
-						linkedin="https://www.linkedin.com/in/leandro-alvarez-duran-a70b90131/"
-					/>
-					<TeamMember
-						photo={marcos}
-						name="Marcos Nicolau"
-						position="Software Developer"
-						linkedin="https://www.linkedin.com/in/marcos-nicolau-0ba38a178/"
 					/>
 				</div>
 			</div>
