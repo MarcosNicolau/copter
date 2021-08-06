@@ -1,14 +1,11 @@
 import React from "react";
-import fullLogoLight from "../assets/company/full-logo-light.png";
+import { Link } from "react-router-dom";
+
 import facebook from "../assets/company/contact/facebook.svg";
 import instagram from "../assets/company/contact/instagram.svg";
 import linkedin from "../assets/company/contact/linkedin.svg";
-import { Link } from "react-router-dom";
-import {
-	redirectToFacebook,
-	redirectToInstagram,
-	redirectToLinkedin,
-} from "./shared/utils/redirects";
+import fullLogoLight from "../assets/company/full-logo-light.png";
+import { redirectToFacebook, redirectToInstagram, redirectToLinkedin } from "./shared/utils/redirects";
 
 const Footer = () => {
 	return (
@@ -45,6 +42,7 @@ const Footer = () => {
 								<Link to="/cotizaciones/usdc">USDC</Link>
 								<Link to="/cotizaciones/reserve">Reserve</Link>
 								<Link to="/cotizaciones/reserverights">Reserve Rights</Link>
+								<Link to="/cotizaciones/stellar">Stellar</Link>
 							</div>
 							<div className="flex-column footer__links">
 								<h5>Empresa</h5>

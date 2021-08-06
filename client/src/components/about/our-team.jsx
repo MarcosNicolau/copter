@@ -1,17 +1,21 @@
 import React from "react";
+
 import linkedinIcon from "../../assets/company/contact/linkedin-2.svg";
 import hernan from "../../assets/company/team/hernan.jpg";
 import ignacio from "../../assets/company/team/ignacio.jpg";
-import abril from "../../assets/company/team/abril.jpg";
 import leandro from "../../assets/company/team/leandro.jpg";
 import marcos from "../../assets/company/team/marcos.jpg";
+import pablo from "../../assets/company/team/pablo.jpg";
+import vanina from "../../assets/company/team/vanina.jpg";
 
 const TeamMember = ({ photo, name, position, linkedin }) => {
 	const handleLinkedinRedirect = () => window.open(linkedin);
 
 	return (
 		<div className="flex-column-center  our-team__member">
-			<img src={photo} alt={name} className="our-team__member__profile" />
+			<div className="flex-column-center our-team__member__profile">
+				<img src={photo} alt={name}/>
+			</div>
 			<h5>{name}</h5>
 			<p>{position}</p>
 			<img
@@ -35,10 +39,16 @@ const OurTeam = () => {
 					</p>
 				</div>
 				<div className="text-neutral-0 our-team__members">
+				<TeamMember
+						photo={pablo}
+						name="Pablo Cantarin"
+						position="Chief Executive Officer && CTO"
+						linkedin="https://www.linkedin.com/in/pablo-cantarin-252370124/"
+					/>
 					<TeamMember
 						photo={hernan}
 						name="Hernan Cantarin"
-						position="Chief Executive Officer"
+						position="Chief Financial Officer"
 						linkedin="https://www.linkedin.com/in/hernan-cantarin-a82b75a3/"
 					/>
 					<TeamMember
@@ -48,10 +58,10 @@ const OurTeam = () => {
 						linkedin="https://www.linkedin.com/in/ignacio-manzanel-b509661a9/"
 					/>
 					<TeamMember
-						photo={abril}
-						name="Abril García"
+						photo={vanina}
+						name="Vanina Veleizan"
 						position={`Community Manager && UX`}
-						linkedin="https://www.linkedin.com/in/abril-garcia-54584a1b7/"
+						linkedin="https://www.linkedin.com/in/vanina-veleizan-272311178/"
 					/>
 					<TeamMember
 						photo={leandro}

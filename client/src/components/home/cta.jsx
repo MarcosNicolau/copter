@@ -13,7 +13,7 @@ const CTA = () => {
 						</h2>
 						<div data-aos="fade-up">
 							<a
-								href="https://app.exchangecopter.com/signup"
+								href="https://auth.exchangecopter.com/registrarse"
 								className="button cta cta--violet cta--violet-1"
 							>
 								Empezar ahora

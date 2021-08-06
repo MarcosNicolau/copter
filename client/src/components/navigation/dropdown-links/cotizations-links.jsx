@@ -1,32 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CotizationsLinks = () => {
 	return (
 		<>
 			<li>
-				<a className="nav__links" href="/cotizaciones/bitcoin">
+				<Link className="nav__links" to="/cotizaciones/bitcoin">
 					Bitcoin
-				</a>
+				</Link>
 			</li>
 			<li>
-				<a className="nav__links" href="/cotizaciones/ethereum">
+				<Link className="nav__links" to="/cotizaciones/ethereum">
 					Ethereum
-				</a>
+				</Link>
 			</li>
 			<li>
-				<a className="nav__links" href="/cotizaciones/usdc">
+				<Link className="nav__links" to="/cotizaciones/usdc">
 					USDC
-				</a>
+				</Link>
 			</li>
 			<li>
-				<a className="nav__links" href="/cotizaciones/reserve">
+				<Link className="nav__links" to="/cotizaciones/reserve">
 					Reserve
-				</a>
+				</Link>
 			</li>
 			<li>
-				<a className="nav__links" href="/cotizaciones/reserverights">
+				<Link className="nav__links" to="/cotizaciones/reserverights">
 					Reserve Rights
-				</a>
+				</Link>
+			</li>
+			<li>
+				<Link className="nav__links" to="/cotizaciones/stellar">
+					Stellar
+				</Link>
 			</li>
 		</>
 	);

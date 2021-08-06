@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React, { lazy, Suspense, useEffect } from "react";
 import AOS from "aos";
+import React, { lazy, Suspense, useEffect } from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 import "./styles/style.scss";
 import "aos/dist/aos.css";
 
@@ -22,6 +23,7 @@ const EthereumCotization = lazy(() => import("./components/cotizations/pages/eth
 const ReserveCotization = lazy(() => import("./components/cotizations/pages/reserve"));
 const ReserveRightsCotization = lazy(() => import("./components/cotizations/pages/reserve-rights"));
 const USDCCotization = lazy(() => import("./components/cotizations/pages/usdc"));
+const XLMCotization = lazy(() => import("./components/cotizations/pages/xlm"));
 
 //Legal
 const Terms = lazy(() => import("./components/legal/terms"));
@@ -68,6 +70,7 @@ const App = () => {
 							component={ReserveRightsCotization}
 						/>
 						<Route exact path="/cotizaciones/usdc" component={USDCCotization} />
+						<Route exact path="/cotizaciones/stellar" component={XLMCotization} />
 						<Route path="/" component={Home} />
 					</Switch>
 				</NavContextProvider>

@@ -23,7 +23,7 @@ const Hero = () => {
 							</p>
 							<div data-aos="fade-up" data-aos-delay="500">
 								<a
-									href="https://app.exchangecopter.com/signup"
+									href="https://auth.exchangecopter.com/registrarse"
 									className="button cta cta--white hero__cta"
 								>
 									Comenzar

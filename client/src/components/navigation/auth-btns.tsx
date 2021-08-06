@@ -10,14 +10,14 @@ const AuthBtns: React.FC<Props> = ({ mobileClass }) => {
 
 	return (
 		<div className="flex-row-center button-container">
-			<a className={`button auth`} href="https://app.exchangecopter.com/login">
+			<a className={`button auth`} href="https://auth.exchangecopter.com">
 				Acceder
 			</a>
 			<a
 				className={`button auth ${
 					mobileClass ? mobileClass : isNavLight ? "auth--light" : "auth--blue"
 				} `}
-				href="https://app.exchangecopter.com/signup"
+				href="https://auth.exchangecopter.com/registrarse"
 			>
 				Registrate
 			</a>

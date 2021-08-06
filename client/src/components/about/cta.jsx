@@ -9,7 +9,7 @@ const CTA = () => {
 					<p>No te quedes afuera de esta nueva economía digital</p>
 				</div>
 				<a
-					href="https://app.exchangecopter.com/signup"
+					href="https://auth.exchangecopter.com/registrarse"
 					className="button cta cta--violet cta--violet-2"
 				>
 					Comenzar
