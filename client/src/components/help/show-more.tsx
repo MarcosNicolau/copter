@@ -11,7 +11,7 @@ const ShowMore: React.FC<Props> = ({ setIsShowMore, isShowMore }) => {
 
 	return (
 		<button onClick={handleShowMore} className="btn--text text-center width-100">
-			Mostrar {isShowMore ? "menos" : "mas"}
+			Mostrar {isShowMore ? "menos" : "más"}
 		</button>
 	);
 };

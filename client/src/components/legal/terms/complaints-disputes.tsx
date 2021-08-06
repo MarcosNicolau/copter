@@ -3,18 +3,18 @@ import { Point, Text } from "../content";
 
 const Complaints = () => {
 	return (
-		<Point title="16. Complaints and Disputes">
+		<Point title="6. Complaints and Disputes">
 			<Text>
-				Copter is committed to providing its Approved Users with a very high level of
-				customer service, and your satisfaction is very important to us.
+				Copter se compromete a brindar a sus usuarios aprobados un nivel muy alto de
+				servicio al cliente, y su satisfacción es muy importante para nosotros.
 			</Text>
 			<Text>
-				If you would like to make a complaint, we encourage you to contact us in the first
-				instance by email to support@exchangecopter.com
+				Si desea presentar una queja, le recomendamos que se comunique con nosotros en
+				primera instancia por correo electrónico a support@exchangecopter.com
 			</Text>
 			<Text>
-				We will acknowledge your complaint within 5 business days and make sure your
-				complaint is investigated properly.
+				Reconoceremos su queja dentro de los 5 días hábiles y nos aseguraremos de que se
+				investigue adecuadamente.
 			</Text>
 		</Point>
 	);

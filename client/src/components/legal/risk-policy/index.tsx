@@ -5,6 +5,7 @@ import PrivateKey from "./private-key";
 import Guarantee from "./guarantee";
 import Document from "./document";
 import TermsChange from "./terms-change";
+import YourRisk from "./your-risk";
 
 const RiskPolicy = () => {
 	return (
@@ -16,6 +17,7 @@ const RiskPolicy = () => {
 				<Guarantee />
 				<Document />
 				<TermsChange />
+				<YourRisk />
 			</div>
 		</section>
 	);
